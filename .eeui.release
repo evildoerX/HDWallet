@@ -1,0 +1,7 @@
+{
+	"name": "HDWallet",
+	"appName": "hdwallet",
+	"applicationID": "app.ci123.hdwallet",
+	"bundleIdentifier": "app.ci123.hdwallet",
+	"release": "1.0.0-rc6"
+}
