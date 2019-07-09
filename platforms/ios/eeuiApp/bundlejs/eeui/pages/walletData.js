@@ -62,26 +62,16 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 27);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 18:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 27:
+/***/ (function(module, exports) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(19)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(20)
-
-/* template */
-var __vue_template__ = __webpack_require__(21)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -93,10 +83,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/index.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-57509004"
+__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/walletData.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -111,95 +98,6 @@ module.exports = __vue_exports__
 module.exports.el = 'true'
 new Vue(module.exports)
 
-
-/***/ }),
-
-/***/ 19:
-/***/ (function(module, exports) {
-
-module.exports = {
-  "app": {
-    "flex": 1
-  },
-  "tabbar": {
-    "flex": 1,
-    "width": "750"
-  }
-}
-
-/***/ }),
-
-/***/ 20:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  data: function data() {
-    return {
-      tabPages: [{
-        title: "资产",
-        selectedIcon: "tb-home",
-        url: "./assets"
-      }, {
-        title: "财富",
-        selectedIcon: "tb-recharge",
-        url: "./test"
-      }, {
-        title: "朋友",
-        selectedIcon: "tb-group",
-        url: "http://dotwe.org/raw/dist/fb6f016b0116969b6b503e1d3a35285f.bundle.wx"
-      }, {
-        title: "我的",
-        selectedIcon: "tb-my",
-        url: "http://dotwe.org/raw/dist/ad0045a7cff0b3a680d9de6dd4806e81.bundle.wx"
-      }]
-    };
-  }
-};
-
-/***/ }),
-
-/***/ 21:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["app"]
-  }, [_c('tabbar', {
-    ref: "reflectName",
-    staticClass: ["tabbar"],
-    attrs: {
-      "eeui": {
-        tabType: 'bottom'
-      },
-      "tabPages": _vm.tabPages
-    }
-  })])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
 
 /***/ })
 

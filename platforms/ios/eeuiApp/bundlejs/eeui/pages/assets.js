@@ -80,7 +80,7 @@ __vue_styles__.push(__webpack_require__(1)
 __vue_exports__ = __webpack_require__(2)
 
 /* template */
-var __vue_template__ = __webpack_require__(13)
+var __vue_template__ = __webpack_require__(17)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -341,7 +341,7 @@ __vue_styles__.push(__webpack_require__(7)
 __vue_exports__ = __webpack_require__(8)
 
 /* template */
-var __vue_template__ = __webpack_require__(12)
+var __vue_template__ = __webpack_require__(16)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -415,7 +415,7 @@ var _WalletCard = __webpack_require__(9);
 
 var _WalletCard2 = _interopRequireDefault(_WalletCard);
 
-var _WalletItem = __webpack_require__(23);
+var _WalletItem = __webpack_require__(12);
 
 var _WalletItem2 = _interopRequireDefault(_WalletItem);
 
@@ -450,31 +450,26 @@ exports.default = {
   data: function data() {
     return {
       walletList: [{
-        icon: "BTC",
         name: "BTC",
         tag: "Bitcoin",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "ETH",
         tag: "Ethereum",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "EOS",
         tag: "Enterprise Operation System",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "BCH",
         tag: "Bitcoin Cash",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "BSV",
         tag: "Bitcoin SV",
         amount: "9999",
@@ -696,78 +691,20 @@ module.exports.render._withStripped = true
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["wallet"]
-  }, [_c('div', {
-    staticClass: ["walletbg"]
-  }), _c('WalletCard'), _c('scroll-view', {
-    staticClass: ["walletlist"]
-  }, [_vm._l((_vm.walletList), function(item, index) {
-    return _c('WalletItem', {
-      key: index,
-      attrs: {
-        "icon": item.icon,
-        "name": item.name,
-        "tag": item.tag,
-        "amount": item.amount,
-        "value": item.value
-      }
-    })
-  }), _c('text', {
-    staticClass: ["walletlist-tips"]
-  }, [_vm._v("基于BIP44协议")])], 2)], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["asset"]
-  }, [_c('navbar', {
-    staticClass: ["asset-navbar"]
-  }, [_c('navbar-item', {
-    attrs: {
-      "type": "title"
-    }
-  }, [_c('div', {
-    staticClass: ["asset-navbar-main"]
-  }, [_c('text', {
-    staticClass: ["asset-navbar-title"]
-  }, [_vm._v("资产")])])])], 1), _c('Tool'), _c('Wallet')], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(24)
+__vue_styles__.push(__webpack_require__(13)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(25)
+__vue_exports__ = __webpack_require__(14)
 
 /* template */
-var __vue_template__ = __webpack_require__(26)
+var __vue_template__ = __webpack_require__(15)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -797,7 +734,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 24 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -847,7 +784,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 25 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -894,7 +831,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 26 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -903,7 +840,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('image', {
     staticClass: ["walletitem-logo"],
     attrs: {
-      "src": ("../../../assets/AssetLogo/" + _vm.name + ".png")
+      "src": ("../assets/AssetLogo/" + _vm.name + ".png")
     }
   }), _c('div', {
     staticClass: ["walletitem-group"]
@@ -920,6 +857,55 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.amount))]), _c('text', {
     staticClass: ["walletitem-group_price_label"]
   }, [_vm._v("≈$" + _vm._s(_vm.value))])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["wallet"]
+  }, [_c('div', {
+    staticClass: ["walletbg"]
+  }), _c('WalletCard'), _c('scroll-view', {
+    staticClass: ["walletlist"]
+  }, [_vm._l((_vm.walletList), function(item, index) {
+    return _c('WalletItem', {
+      key: index,
+      attrs: {
+        "icon": item.icon,
+        "name": item.name,
+        "tag": item.tag,
+        "amount": item.amount,
+        "value": item.value
+      }
+    })
+  }), _c('text', {
+    staticClass: ["walletlist-tips"]
+  }, [_vm._v("基于BIP44协议")])], 2)], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["asset"]
+  }, [_c('navbar', {
+    staticClass: ["asset-navbar"]
+  }, [_c('navbar-item', {
+    attrs: {
+      "type": "title"
+    }
+  }, [_c('div', {
+    staticClass: ["asset-navbar-main"]
+  }, [_c('text', {
+    staticClass: ["asset-navbar-title"]
+  }, [_vm._v("资产")])])])], 1), _c('Tool'), _c('Wallet')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

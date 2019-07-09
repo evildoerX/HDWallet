@@ -1,6 +1,6 @@
 <template>
   <div class="walletitem">
-    <image class="walletitem-logo" :src="`../../../assets/AssetLogo/${name}.png`" ></image>
+    <image class="walletitem-logo" :src="`../assets/AssetLogo/${name}.png`" ></image>
     <div class="walletitem-group">
       <div class="walletitem-group_info">
         <text class="walletitem-group_info_name">{{name}}</text>

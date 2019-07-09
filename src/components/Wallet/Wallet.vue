@@ -30,35 +30,30 @@ export default {
     return {
       walletList: [
         {
-          icon: "BTC",
           name: "BTC",
           tag: "Bitcoin",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "ETH",
           tag: "Ethereum",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "EOS",
           tag: "Enterprise Operation System",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "BCH",
           tag: "Bitcoin Cash",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "BSV",
           tag: "Bitcoin SV",
           amount: "9999",
