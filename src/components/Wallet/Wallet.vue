@@ -2,18 +2,28 @@
   <div class="wallet">
     <div class="walletbg"></div>
     <WalletCard />
-    <scroll-view class="walletlist">
-      <WalletItem
-        v-for="(item, index) in walletList"
-        :key="index"
-        :icon="item.icon"
-        :name="item.name"
-        :tag="item.tag"
-        :amount="item.amount"
-        :value="item.value"
-      />
-      <text class="walletlist-tips">基于BIP44协议</text>
-    </scroll-view>
+    <tabbar
+      ref="reflectName"
+      class="tabbar"
+      :eeui="{ tabType: 'top', tabHeight:0 }"
+      @pageSelected="pageSelected"
+      @tabReselect="tabReselect"
+      @refreshListener="refreshListener"
+    >
+      <tabbar-page :eeui="{ tabName: 'name_1', title:'首页', selectedIcon:'md-home'}">
+        <div class="page-content">
+          <WalletItem
+            v-for="(item, index) in walletList"
+            :key="index"
+            :icon="item.icon"
+            :name="item.name"
+            :tag="item.tag"
+            :amount="item.amount"
+            :value="item.value"
+          />
+        </div>
+      </tabbar-page>
+    </tabbar>
   </div>
 </template>
 
@@ -60,35 +70,30 @@ export default {
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "LTC",
           tag: "Litecoin",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "ETC",
           tag: "Ethereum Classic",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "ZEC",
           tag: "Zcash",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "DASH",
           tag: "Dash",
           amount: "9999",
           value: "999999"
         },
         {
-          icon: "https://vuejs.org/images/logo.png",
           name: "TRX",
           tag: "TRON",
           amount: "9999",
@@ -120,6 +125,16 @@ export default {
   font-size: 24px;
   padding: 32px 0;
   color: #999999;
+}
+
+.tabbar {
+  width: 750px;
+  flex: 1;
+}
+
+.page-content {
+  width: 750px;
+  flex: 1;
 }
 </style>
 

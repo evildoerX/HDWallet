@@ -397,6 +397,14 @@ module.exports = {
     "paddingBottom": "32",
     "paddingLeft": 0,
     "color": "#999999"
+  },
+  "tabbar": {
+    "width": "750",
+    "flex": 1
+  },
+  "page-content": {
+    "width": "750",
+    "flex": 1
   }
 }
 
@@ -421,6 +429,16 @@ var _WalletItem2 = _interopRequireDefault(_WalletItem);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -475,31 +493,26 @@ exports.default = {
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "LTC",
         tag: "Litecoin",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "ETC",
         tag: "Ethereum Classic",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "ZEC",
         tag: "Zcash",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "DASH",
         tag: "Dash",
         amount: "9999",
         value: "999999"
       }, {
-        icon: "https://vuejs.org/images/logo.png",
         name: "TRX",
         tag: "TRON",
         amount: "9999",
@@ -869,9 +882,31 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["wallet"]
   }, [_c('div', {
     staticClass: ["walletbg"]
-  }), _c('WalletCard'), _c('scroll-view', {
-    staticClass: ["walletlist"]
-  }, [_vm._l((_vm.walletList), function(item, index) {
+  }), _c('WalletCard'), _c('tabbar', {
+    ref: "reflectName",
+    staticClass: ["tabbar"],
+    attrs: {
+      "eeui": {
+        tabType: 'top',
+        tabHeight: 0
+      }
+    },
+    on: {
+      "pageSelected": _vm.pageSelected,
+      "tabReselect": _vm.tabReselect,
+      "refreshListener": _vm.refreshListener
+    }
+  }, [_c('tabbar-page', {
+    attrs: {
+      "eeui": {
+        tabName: 'name_1',
+        title: '首页',
+        selectedIcon: 'md-home'
+      }
+    }
+  }, [_c('div', {
+    staticClass: ["page-content"]
+  }, _vm._l((_vm.walletList), function(item, index) {
     return _c('WalletItem', {
       key: index,
       attrs: {
@@ -882,9 +917,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "value": item.value
       }
     })
-  }), _c('text', {
-    staticClass: ["walletlist-tips"]
-  }, [_vm._v("基于BIP44协议")])], 2)], 1)
+  }))])], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
