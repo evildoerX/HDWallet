@@ -23,15 +23,17 @@
 
 <style scoped>
 .walletCard {
-  border-color: black;
-  border-width: 1px;
   border-radius: 16px;
   height: 280px;
-  width: 700px;
+  width: 718px;
   padding: 32px 24px;
   margin-left: 16px;
   margin-right: 16px;
   background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  border-style: solid;
 }
 .walletCard-header {
   flex-direction: row;
@@ -40,18 +42,17 @@
 .walletCard-header_text {
   font-size: 32px;
   font-weight: 500;
+  color: #333333;
 }
 .walletCard-header_btn {
   margin-left: 16px;
   border-color: #ffa50d;
   border-width: 1px;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 4px 8px;
   color: #ffa50d;
 }
 .walletCard-content {
-  border-color: black;
-  border-width: 1px;
   margin-top: 64px;
 }
 .walletCard-content_header {
