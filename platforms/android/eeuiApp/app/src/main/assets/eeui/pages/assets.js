@@ -712,6 +712,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
 
 var eeui = app.requireModule("eeui");
 
@@ -990,7 +992,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: ["wallet-bg"]
   }), _c('WalletCard', {
-    staticClass: ["wallet-card"]
+    staticClass: ["wallet-card"],
+    attrs: {
+      "showWalletSet": false
+    }
   }), _c('scroll-view', {
     ref: "reflectName",
     staticClass: ["wallet-list"],

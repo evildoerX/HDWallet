@@ -1,7 +1,9 @@
 <template>
   <div class="wallet">
     <div class="wallet-bg"></div>
-    <WalletCard class="wallet-card"/>
+    <WalletCard class="wallet-card"
+      :showWalletSet="false"
+    />
     <scroll-view
       ref="reflectName"
       class="wallet-list"

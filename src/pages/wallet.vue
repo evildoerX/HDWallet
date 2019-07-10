@@ -17,8 +17,8 @@
       :eeui="{ pullTips: true, }"
       @refreshListener="refreshListener"
     >
-      <div v-for="(item, index) in walletList" :key="index" @click="itemClick(item)">
-        <WalletItem
+      <div class="wallet-carditem" v-for="(item, index) in walletList" :key="index" @click="itemClick(item)">
+        <WalletManageCard
           :icon="item.icon"
           :name="item.name"
           :tag="item.tag"
@@ -31,12 +31,12 @@
 </template>
 
 <script>
-import WalletItem from "../components/Wallet/WalletItem/WalletItem";
+import WalletManageCard from "../components/Wallet/WalletManageCard/WalletManageCard";
 var eeui = app.requireModule("eeui");
 
 export default {
   components: {
-    WalletItem
+    WalletManageCard
   },
 
   data() {
@@ -108,9 +108,10 @@ export default {
   methods: {
     itemClick(params) {
       eeui.openPage({
-        url: 'receiptDetails',
+        url: 'walletDetails',
         pageType: "app",
         params: params,
+        statusBarType: 'immersion'
       });
     },
     refreshListener() {
@@ -156,5 +157,13 @@ export default {
   color: #333333;
   padding: 16px 32px;
   font-size: 28px;
+}
+.wallet-list {
+  width: 750px;
+  flex: 1;
+  margin-bottom: 64px;
+}
+.wallet-carditem {
+  margin-top: 32px;
 }
 </style>
