@@ -763,6 +763,13 @@ exports.default = {
   },
 
   methods: {
+    itemClick: function itemClick(params) {
+      eeui.openPage({
+        url: 'assetsDetails',
+        pageType: "app",
+        params: params
+      });
+    },
     refreshListener: function refreshListener() {
       var _this = this;
 
@@ -981,8 +988,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "refreshListener": _vm.refreshListener
     }
   }, [_vm._l((_vm.walletList), function(item, index) {
-    return _c('WalletItem', {
+    return _c('div', {
       key: index,
+      on: {
+        "click": function($event) {
+          _vm.itemClick(item)
+        }
+      }
+    }, [_c('WalletItem', {
       attrs: {
         "icon": item.icon,
         "name": item.name,
@@ -990,7 +1003,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "amount": item.amount,
         "value": item.value
       }
-    })
+    })], 1)
   }), _c('text', {
     staticClass: ["wallet-tips"]
   }, [_vm._v("基于BIP44协议")])], 2)], 1)

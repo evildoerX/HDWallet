@@ -8,15 +8,15 @@
       :eeui="{ pullTips: true, }"
       @refreshListener="refreshListener"
     >
-      <WalletItem
-        v-for="(item, index) in walletList"
-        :key="index"
-        :icon="item.icon"
-        :name="item.name"
-        :tag="item.tag"
-        :amount="item.amount"
-        :value="item.value"
-      />
+      <div v-for="(item, index) in walletList" :key="index" @click="itemClick(item)">
+        <WalletItem
+          :icon="item.icon"
+          :name="item.name"
+          :tag="item.tag"
+          :amount="item.amount"
+          :value="item.value"
+        />
+      </div>
       <text class="wallet-tips">基于BIP44协议</text>
     </scroll-view>
   </div>
@@ -100,6 +100,13 @@ export default {
     };
   },
   methods: {
+    itemClick(params) {
+      eeui.openPage({
+        url: 'assetsDetails',
+        pageType: "app",
+        params: params,
+      });
+    },
     refreshListener() {
       setTimeout(() => {
         this.$refs.reflectName.setHasMore(true);

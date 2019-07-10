@@ -17,6 +17,7 @@
       :eeui="{ pullTips: true, }"
       @refreshListener="refreshListener"
     >
+      <text class="wallet-name">当前钱包: 区块链韭菜</text>
       <div v-for="(item, index) in walletList" :key="index" @click="itemClick(item)">
         <WalletItem
           :icon="item.icon"
@@ -150,5 +151,11 @@ export default {
   width: 100px;
   height: 100px;
   color: #ffffff;
+}
+.wallet-name {
+  background-color: #f7f8fa;
+  color: #333333;
+  padding: 16px 32px;
+  font-size: 28px;
 }
 </style>

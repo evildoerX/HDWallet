@@ -62,7 +62,7 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 38);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -242,21 +242,21 @@ module.exports.render._withStripped = true
 
 /***/ }),
 
-/***/ 38:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(39)
+__vue_styles__.push(__webpack_require__(42)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(40)
+__vue_exports__ = __webpack_require__(43)
 
 /* template */
-var __vue_template__ = __webpack_require__(41)
+var __vue_template__ = __webpack_require__(44)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -289,7 +289,7 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 39:
+/***/ 42:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -313,12 +313,21 @@ module.exports = {
     "width": "100",
     "height": "100",
     "color": "#ffffff"
+  },
+  "wallet-name": {
+    "backgroundColor": "#f7f8fa",
+    "color": "#333333",
+    "paddingTop": "16",
+    "paddingRight": "32",
+    "paddingBottom": "16",
+    "paddingLeft": "32",
+    "fontSize": "28"
   }
 }
 
 /***/ }),
 
-/***/ 40:
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -335,6 +344,7 @@ var _WalletItem2 = _interopRequireDefault(_WalletItem);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var eeui = app.requireModule("eeui"); //
+//
 //
 //
 //
@@ -453,7 +463,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 41:
+/***/ 44:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -493,7 +503,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "refreshListener": _vm.refreshListener
     }
-  }, _vm._l((_vm.walletList), function(item, index) {
+  }, [_c('text', {
+    staticClass: ["wallet-name"]
+  }, [_vm._v("当前钱包: 区块链韭菜")]), _vm._l((_vm.walletList), function(item, index) {
     return _c('div', {
       key: index,
       on: {
@@ -510,7 +522,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "value": item.value
       }
     })], 1)
-  }))], 1)
+  })], 2)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
