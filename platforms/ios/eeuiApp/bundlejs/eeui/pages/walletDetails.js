@@ -437,12 +437,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: ["walletdetails_statusbar"]
   }), _c('navbar', {
-    staticClass: ["walletdetails-navbar"],
-    attrs: {
-      "eeui": {
-        backgroundColor: '#72a1ff'
-      }
-    }
+    staticClass: ["walletdetails-navbar"]
   }, [_c('navbar-item', {
     attrs: {
       "type": "back"

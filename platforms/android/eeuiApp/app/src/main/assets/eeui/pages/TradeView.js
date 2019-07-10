@@ -288,7 +288,31 @@ new Vue(module.exports)
 module.exports = {
   "tradeview": {
     "flex": 1,
+    "width": "750",
     "backgroundColor": "#171b30"
+  },
+  "tradeview-statusbar": {
+    "width": "750",
+    "height": "60",
+    "backgroundImage": "linear-gradient(to right, #72a1ff, #3176ee)"
+  },
+  "tradeview-navbar": {
+    "width": "750",
+    "height": "100",
+    "backgroundImage": "linear-gradient(to right, #72a1ff, #3176ee)"
+  },
+  "tradeview-navbar-main": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "tradeview-navbar-title": {
+    "fontSize": "32",
+    "color": "#ffffff"
+  },
+  "tradeview-navbar-right": {
+    "width": "100",
+    "height": "100",
+    "color": "#ffffff"
   },
   "tradeview-list": {
     "width": "750",
@@ -355,6 +379,17 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 
@@ -408,7 +443,6 @@ module.exports = __vue_exports__
 
 module.exports = {
   "TradeViewHeader": {
-    "backgroundImage": "linear-gradient(to right, #041636, #183b77)",
     "paddingTop": "50"
   },
   "TradeViewHeader-content": {
@@ -460,7 +494,6 @@ var _OHeader2 = _interopRequireDefault(_OHeader);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var eeui = weex.requireModule("eeui"); //
-//
 //
 //
 //
@@ -625,9 +658,10 @@ module.exports = __vue_exports__
 
 module.exports = {
   "TradeViewInfo": {
-    "backgroundImage": "linear-gradient(to right, #041636, #183b77)",
+    "backgroundImage": "linear-gradient(to right, #72a1ff, #3176ee)",
     "width": "750",
-    "paddingBottom": "8"
+    "paddingBottom": "8",
+    "marginTop": "-5"
   },
   "TradeViewInfo-market": {
     "flexDirection": "row",
@@ -637,7 +671,7 @@ module.exports = {
     "paddingRight": "36"
   },
   "TradeViewInfo-market_left_price": {
-    "color": "#4db872",
+    "color": "#46e47d",
     "fontSize": "64"
   },
   "TradeViewInfo-market_left_info": {
@@ -653,24 +687,24 @@ module.exports = {
     "marginTop": "8"
   },
   "TradeViewInfo-market_left_inc": {
-    "backgroundColor": "rgb(77,184,114)",
+    "backgroundColor": "rgb(44,148,80)",
     "paddingTop": "4",
     "paddingRight": "8",
     "paddingBottom": "4",
     "paddingLeft": "8",
     "borderRadius": "8",
-    "color": "rgba(255,255,255,0.65)"
+    "color": "rgba(255,255,255,0.85)"
   },
   "TradeViewInfo-market_left_incnum": {
-    "color": "#4db872",
+    "color": "#5be08a",
     "marginLeft": "8"
   },
   "TradeViewInfo-market_text": {
-    "color": "rgba(255,255,255,0.85)",
+    "color": "rgba(255,255,255,1)",
     "marginLeft": "8"
   },
   "TradeViewInfo-market_titletext": {
-    "color": "rgba(255,255,255,0.45)",
+    "color": "rgba(255,255,255,1)",
     "fontSize": "24"
   }
 }
@@ -950,11 +984,32 @@ module.exports.render._withStripped = true
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["tradeview"]
-  }, [_c('TradeViewHeader', {
+  }, [_c('div', {
+    staticClass: ["tradeview-statusbar"]
+  }), _c('navbar', {
+    staticClass: ["tradeview-navbar"]
+  }, [_c('navbar-item', {
     attrs: {
-      "marketInfo": _vm.marketInfo
+      "type": "back"
     }
-  }), _c('TradeViewInfo', {
+  }), _c('navbar-item', {
+    attrs: {
+      "type": "title"
+    }
+  }, [_c('div', {
+    staticClass: ["tradeview-navbar-main"]
+  }, [_c('text', {
+    staticClass: ["tradeview-navbar-title"]
+  }, [_vm._v(_vm._s(((_vm.marketInfo.stock) + " / " + (_vm.marketInfo.money))))])])]), _c('navbar-item', {
+    attrs: {
+      "type": "right"
+    }
+  }, [_c('icon', {
+    staticClass: ["tradeview-navbar-right"],
+    attrs: {
+      "content": "tb-share"
+    }
+  })], 1)], 1), _c('TradeViewInfo', {
     attrs: {
       "marketInfo": _vm.marketInfo
     }

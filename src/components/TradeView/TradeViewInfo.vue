@@ -42,9 +42,10 @@ export default {
 
 <style scoped>
 .TradeViewInfo {
-  background-image: linear-gradient(to right, #041636, #183b77);
+  background-image: linear-gradient(to right, #72a1ff, #3176ee);
   width: 750px;
   padding-bottom: 8px;
+  margin-top: -5px;
 }
 .TradeViewInfo-market {
   flex-direction: row;
@@ -54,7 +55,7 @@ export default {
   padding-right: 36px;
 }
 .TradeViewInfo-market_left_price {
-  color: #4db872;
+  color: #46e47d;
   font-size: 64px;
 }
 .TradeViewInfo-market_left_info {
@@ -70,21 +71,21 @@ export default {
   margin-top: 8px;
 }
 .TradeViewInfo-market_left_inc {
-  background-color: rgb(77, 184, 114);
+  background-color: rgb(44, 148, 80);
   padding: 4px 8px;
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.85);
 }
 .TradeViewInfo-market_left_incnum {
-  color: #4db872;
+  color: #5be08a;
   margin-left: 8px;
 }
 .TradeViewInfo-market_text {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 1);
   margin-left: 8px;
 }
 .TradeViewInfo-market_titletext {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 1);
   font-size: 24px;
 }
 </style>

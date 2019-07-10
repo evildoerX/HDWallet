@@ -1,6 +1,5 @@
 <template>
   <div class="TradeViewHeader">
-    <!-- <text style="color:#fff">1asdasdasdasdasdasdasdasdasdasdadasd</text> -->
     <OHeader class="TradeViewHeader-content">
       <div slot="left" class="TradeViewHeader-content-left" @click="back()">
         <icon
@@ -51,7 +50,8 @@ export default {
 
 <style scoped>
 .TradeViewHeader {
-  background-image: linear-gradient(to right, #041636, #183b77);
+  /* background-image: linear-gradient(to right, #041636, #183b77); */
+  /* background-color: #041636; */
   padding-top: 50px;
 }
 .TradeViewHeader-content {

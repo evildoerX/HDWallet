@@ -1,7 +1,7 @@
 <template>
   <icon class="walletdetails">
     <div class="walletdetails_statusbar"></div>
-    <navbar class="walletdetails-navbar" :eeui="{backgroundColor:'#72a1ff'}">
+    <navbar class="walletdetails-navbar">
       <navbar-item type="back"></navbar-item>
       <navbar-item type="title">
         <div class="walletdetails-navbar-main">
