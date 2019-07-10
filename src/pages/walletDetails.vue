@@ -1,5 +1,5 @@
 <template>
-  <div class="walletdetails">
+  <icon class="walletdetails">
     <div class="walletdetails_statusbar"></div>
     <navbar class="walletdetails-navbar" :eeui="{backgroundColor:'#72a1ff'}">
       <navbar-item type="back"></navbar-item>
@@ -20,7 +20,7 @@
       <WalletManageItem icon="md-key" name="开通EOS账户"/>
       <WalletManageItem icon="md-key" name="导出私钥地址"/>
     </div>
-  </div>
+  </icon>
 </template>
 
 <script>

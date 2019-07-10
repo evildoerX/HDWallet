@@ -62,226 +62,26 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 34);
+/******/ 	return __webpack_require__(__webpack_require__.s = 115);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */
+/******/ ({
+
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(3)
+__vue_styles__.push(__webpack_require__(116)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(4)
+__vue_exports__ = __webpack_require__(117)
 
 /* template */
-var __vue_template__ = __webpack_require__(5)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/components/Wallet/WalletItem/WalletItem.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5eed5fee"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "walletitem": {
-    "flexDirection": "row",
-    "alignItems": "center",
-    "marginLeft": "32",
-    "marginRight": "32",
-    "paddingTop": "32",
-    "paddingRight": 0,
-    "paddingBottom": "32",
-    "paddingLeft": 0,
-    "borderBottomWidth": "1",
-    "borderBottomColor": "rgba(0,0,0,0.1)",
-    "borderBottomStyle": "solid"
-  },
-  "walletitem-logo": {
-    "width": "56",
-    "height": "56"
-  },
-  "walletitem-group": {
-    "flex": 1,
-    "flexDirection": "row",
-    "alignItems": "center",
-    "justifyContent": "space-between",
-    "marginLeft": "32"
-  },
-  "walletitem-group_info_name": {
-    "fontSize": "32",
-    "color": "#333333"
-  },
-  "walletitem-group_info_label": {
-    "fontSize": "28",
-    "color": "#999999",
-    "marginTop": "8"
-  },
-  "walletitem-group_price_name": {
-    "fontSize": "32",
-    "color": "#333333",
-    "textAlign": "right"
-  },
-  "walletitem-group_price_label": {
-    "fontSize": "28",
-    "color": "#999999",
-    "marginTop": "8"
-  }
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  props: {
-    icon: {
-      type: String
-    },
-    name: {
-      type: String
-    },
-    tag: {
-      type: String
-    },
-    amount: {
-      type: String
-    },
-    value: {
-      type: String
-    }
-  }
-};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["walletitem"]
-  }, [_c('image', {
-    staticClass: ["walletitem-logo"],
-    attrs: {
-      "src": ("../assets/AssetLogo/" + _vm.name + ".png")
-    }
-  }), _c('div', {
-    staticClass: ["walletitem-group"]
-  }, [_c('div', {
-    staticClass: ["walletitem-group_info"]
-  }, [_c('text', {
-    staticClass: ["walletitem-group_info_name"]
-  }, [_vm._v(_vm._s(_vm.name))]), _c('text', {
-    staticClass: ["walletitem-group_info_label"]
-  }, [_vm._v(_vm._s(_vm.tag))])]), _c('div', {
-    staticClass: ["walletitem-group_price"]
-  }, [_c('text', {
-    staticClass: ["walletitem-group_price_name"]
-  }, [_vm._v(_vm._s(_vm.amount))]), _c('text', {
-    staticClass: ["walletitem-group_price_label"]
-  }, [_vm._v("≈$" + _vm._s(_vm.value))])])])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(35)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(36)
-
-/* template */
-var __vue_template__ = __webpack_require__(48)
+var __vue_template__ = __webpack_require__(129)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -313,7 +113,8 @@ new Vue(module.exports)
 
 
 /***/ }),
-/* 35 */
+
+/***/ 116:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -340,7 +141,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 36 */
+
+/***/ 117:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -350,11 +152,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Tool = __webpack_require__(37);
+var _Tool = __webpack_require__(118);
 
 var _Tool2 = _interopRequireDefault(_Tool);
 
-var _Wallet = __webpack_require__(41);
+var _Wallet = __webpack_require__(122);
 
 var _Wallet2 = _interopRequireDefault(_Wallet);
 
@@ -413,21 +215,22 @@ exports.default = {
 };
 
 /***/ }),
-/* 37 */
+
+/***/ 118:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(38)
+__vue_styles__.push(__webpack_require__(119)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(39)
+__vue_exports__ = __webpack_require__(120)
 
 /* template */
-var __vue_template__ = __webpack_require__(40)
+var __vue_template__ = __webpack_require__(121)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -457,7 +260,8 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 38 */
+
+/***/ 119:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -491,7 +295,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 39 */
+
+/***/ 120:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -548,7 +353,8 @@ exports.default = {
 };
 
 /***/ }),
-/* 40 */
+
+/***/ 121:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -621,21 +427,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 41 */
+
+/***/ 122:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(42)
+__vue_styles__.push(__webpack_require__(123)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(43)
+__vue_exports__ = __webpack_require__(124)
 
 /* template */
-var __vue_template__ = __webpack_require__(47)
+var __vue_template__ = __webpack_require__(128)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -665,7 +472,8 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 42 */
+
+/***/ 123:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -698,7 +506,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 43 */
+
+/***/ 124:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -708,7 +517,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _WalletCard = __webpack_require__(44);
+var _WalletCard = __webpack_require__(125);
 
 var _WalletCard2 = _interopRequireDefault(_WalletCard);
 
@@ -833,18 +642,19 @@ exports.default = {
 };
 
 /***/ }),
-/* 44 */
+
+/***/ 125:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(45)
+__vue_styles__.push(__webpack_require__(126)
 )
 
 /* template */
-var __vue_template__ = __webpack_require__(46)
+var __vue_template__ = __webpack_require__(127)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -874,7 +684,8 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 45 */
+
+/***/ 126:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -964,7 +775,8 @@ module.exports = {
 }
 
 /***/ }),
-/* 46 */
+
+/***/ 127:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1013,7 +825,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 47 */
+
+/***/ 128:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1061,7 +874,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 48 */
+
+/***/ 129:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1093,5 +907,181 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(3)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(4)
+
+/* template */
+var __vue_template__ = __webpack_require__(5)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/components/Wallet/WalletItem/WalletItem.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-5eed5fee"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "walletitem": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "marginLeft": "32",
+    "marginRight": "32",
+    "paddingTop": "32",
+    "paddingRight": 0,
+    "paddingBottom": "32",
+    "paddingLeft": 0,
+    "borderBottomWidth": "1",
+    "borderBottomColor": "rgba(0,0,0,0.1)",
+    "borderBottomStyle": "solid"
+  },
+  "walletitem-logo": {
+    "width": "56",
+    "height": "56"
+  },
+  "walletitem-group": {
+    "flex": 1,
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "space-between",
+    "marginLeft": "32"
+  },
+  "walletitem-group_info_name": {
+    "fontSize": "32",
+    "color": "#333333"
+  },
+  "walletitem-group_info_label": {
+    "fontSize": "28",
+    "color": "#999999",
+    "marginTop": "8"
+  },
+  "walletitem-group_price_name": {
+    "fontSize": "32",
+    "color": "#333333",
+    "textAlign": "right"
+  },
+  "walletitem-group_price_label": {
+    "fontSize": "28",
+    "color": "#999999",
+    "marginTop": "8"
+  }
+}
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    icon: {
+      type: String
+    },
+    name: {
+      type: String
+    },
+    tag: {
+      type: String
+    },
+    amount: {
+      type: String
+    },
+    value: {
+      type: String
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["walletitem"]
+  }, [_c('image', {
+    staticClass: ["walletitem-logo"],
+    attrs: {
+      "src": ("../assets/AssetLogo/" + _vm.name + ".png")
+    }
+  }), _c('div', {
+    staticClass: ["walletitem-group"]
+  }, [_c('div', {
+    staticClass: ["walletitem-group_info"]
+  }, [_c('text', {
+    staticClass: ["walletitem-group_info_name"]
+  }, [_vm._v(_vm._s(_vm.name))]), _c('text', {
+    staticClass: ["walletitem-group_info_label"]
+  }, [_vm._v(_vm._s(_vm.tag))])]), _c('div', {
+    staticClass: ["walletitem-group_price"]
+  }, [_c('text', {
+    staticClass: ["walletitem-group_price_name"]
+  }, [_vm._v(_vm._s(_vm.amount))]), _c('text', {
+    staticClass: ["walletitem-group_price_label"]
+  }, [_vm._v("≈$" + _vm._s(_vm.value))])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
 /***/ })
-/******/ ]);
+
+/******/ });

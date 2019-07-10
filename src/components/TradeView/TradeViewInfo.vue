@@ -1,0 +1,90 @@
+<template>
+  <div class="TradeViewInfo">
+    <div class="TradeViewInfo-market">
+      <div class="TradeViewInfo-market_left">
+        <text class="TradeViewInfo-market_left_price">{{marketInfo.price}}</text>
+        <div class="TradeViewInfo-market_left_info">
+          <text class="TradeViewInfo-market_left_inc">{{`${marketInfo.increase} %`}}</text>
+          <text class="TradeViewInfo-market_left_incnum">{{marketInfo.increase * marketInfo.price}}</text>
+          <text class="TradeViewInfo-market_text">{{`$ ${marketInfo.price}`}}</text>
+        </div>
+      </div>
+      <div>
+        <div class="TradeViewInfo-market_right_info">
+          <text class="TradeViewInfo-market_titletext">24H最高</text>
+          <text class="TradeViewInfo-market_text">{{marketInfo.highest}}</text>
+        </div>
+        <div class="TradeViewInfo-market_right_info">
+          <text class="TradeViewInfo-market_titletext">24H最低</text>
+          <text class="TradeViewInfo-market_text">{{marketInfo.lowest}}</text>
+        </div>
+        <div class="TradeViewInfo-market_right_info">
+          <text class="TradeViewInfo-market_titletext">24H成交量</text>
+          <text class="TradeViewInfo-market_text">{{marketInfo.volume}}</text>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "TradeViewInfo",
+  props: {
+    marketInfo: Object
+  },
+  data() {
+    return {};
+  },
+  computed: {}
+};
+</script>
+
+<style scoped>
+.TradeViewInfo {
+  background-image: linear-gradient(to right, #041636, #183b77);
+  width: 750px;
+  padding-bottom: 8px;
+}
+.TradeViewInfo-market {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.TradeViewInfo-market_left_price {
+  color: #4db872;
+  font-size: 64px;
+}
+.TradeViewInfo-market_left_info {
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+}
+.TradeViewInfo-market_right_info {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  margin-top: 8px;
+}
+.TradeViewInfo-market_left_inc {
+  background-color: rgb(77, 184, 114);
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.65);
+}
+.TradeViewInfo-market_left_incnum {
+  color: #4db872;
+  margin-left: 8px;
+}
+.TradeViewInfo-market_text {
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 8px;
+}
+.TradeViewInfo-market_titletext {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 24px;
+}
+</style>

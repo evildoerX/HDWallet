@@ -62,12 +62,12 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 53);
+/******/ 	return __webpack_require__(__webpack_require__.s = 134);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 53:
+/***/ 134:
 /***/ (function(module, exports) {
 
 var __vue_exports__, __vue_options__

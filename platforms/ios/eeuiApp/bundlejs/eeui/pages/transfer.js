@@ -62,10 +62,296 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 73);
+/******/ 	return __webpack_require__(__webpack_require__.s = 154);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ 154:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(155)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(156)
+
+/* template */
+var __vue_template__ = __webpack_require__(157)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/transfer.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-093fe222"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+module.exports.el = 'true'
+new Vue(module.exports)
+
+
+/***/ }),
+
+/***/ 155:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "transfer": {
+    "width": "750",
+    "flex": 1
+  },
+  "transfer-navbar": {
+    "width": "750",
+    "height": "100"
+  },
+  "transfer-navbar-main": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "transfer-navbar-title": {
+    "fontSize": "32",
+    "color": "#ffffff"
+  },
+  "transfer-navbar-right": {
+    "width": "100",
+    "height": "100",
+    "color": "#ffffff"
+  },
+  "wallet-name": {
+    "backgroundColor": "#f7f8fa",
+    "color": "#333333",
+    "paddingTop": "16",
+    "paddingRight": "32",
+    "paddingBottom": "16",
+    "paddingLeft": "32",
+    "fontSize": "28"
+  }
+}
+
+/***/ }),
+
+/***/ 156:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _WalletItem = __webpack_require__(2);
+
+var _WalletItem2 = _interopRequireDefault(_WalletItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var eeui = app.requireModule("eeui"); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  components: {
+    WalletItem: _WalletItem2.default
+  },
+
+  data: function data() {
+    return {
+      walletList: [{
+        name: "BTC",
+        tag: "Bitcoin",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "ETH",
+        tag: "Ethereum",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "EOS",
+        tag: "Enterprise Operation System",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "BCH",
+        tag: "Bitcoin Cash",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "BSV",
+        tag: "Bitcoin SV",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "LTC",
+        tag: "Litecoin",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "ETC",
+        tag: "Ethereum Classic",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "ZEC",
+        tag: "Zcash",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "DASH",
+        tag: "Dash",
+        amount: "9999",
+        value: "999999"
+      }, {
+        name: "TRX",
+        tag: "TRON",
+        amount: "9999",
+        value: "999999"
+      }]
+    };
+  },
+
+  methods: {
+    itemClick: function itemClick(params) {
+      eeui.openPage({
+        url: 'transferDetails',
+        pageType: "app",
+        params: params
+      });
+    },
+    refreshListener: function refreshListener() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.$refs.reflectName.setHasMore(true);
+        _this.$refs.reflectName.refreshed();
+        eeui.toast({
+          message: "刷新成功",
+          gravity: "middle"
+        });
+      }, 1000);
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 157:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["transfer"]
+  }, [_c('navbar', {
+    staticClass: ["transfer-navbar"]
+  }, [_c('navbar-item', {
+    attrs: {
+      "type": "back"
+    }
+  }), _c('navbar-item', {
+    attrs: {
+      "type": "title"
+    }
+  }, [_c('div', {
+    staticClass: ["transfer-navbar-main"]
+  }, [_c('text', {
+    staticClass: ["transfer-navbar-title"]
+  }, [_vm._v("转账币种选择")])])]), _c('navbar-item', {
+    attrs: {
+      "type": "right"
+    }
+  }, [_c('icon', {
+    staticClass: ["transfer-navbar-right"],
+    attrs: {
+      "content": "tb-search"
+    }
+  })], 1)], 1), _c('scroll-view', {
+    ref: "reflectName",
+    staticClass: ["wallet-list"],
+    attrs: {
+      "eeui": {
+        pullTips: true,
+      }
+    },
+    on: {
+      "refreshListener": _vm.refreshListener
+    }
+  }, [_c('text', {
+    staticClass: ["wallet-name"]
+  }, [_vm._v("当前钱包: 区块链韭菜")]), _vm._l((_vm.walletList), function(item, index) {
+    return _c('div', {
+      key: index,
+      on: {
+        "click": function($event) {
+          _vm.itemClick(item)
+        }
+      }
+    }, [_c('WalletItem', {
+      attrs: {
+        "icon": item.icon,
+        "name": item.name,
+        "tag": item.tag,
+        "amount": item.amount,
+        "value": item.value
+      }
+    })], 1)
+  })], 2)], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
 
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
@@ -237,292 +523,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.amount))]), _c('text', {
     staticClass: ["walletitem-group_price_label"]
   }, [_vm._v("≈$" + _vm._s(_vm.value))])])])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 73:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(74)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(75)
-
-/* template */
-var __vue_template__ = __webpack_require__(76)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/transfer.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-093fe222"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-module.exports.el = 'true'
-new Vue(module.exports)
-
-
-/***/ }),
-
-/***/ 74:
-/***/ (function(module, exports) {
-
-module.exports = {
-  "transfer": {
-    "width": "750",
-    "flex": 1
-  },
-  "transfer-navbar": {
-    "width": "750",
-    "height": "100"
-  },
-  "transfer-navbar-main": {
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "transfer-navbar-title": {
-    "fontSize": "32",
-    "color": "#ffffff"
-  },
-  "transfer-navbar-right": {
-    "width": "100",
-    "height": "100",
-    "color": "#ffffff"
-  },
-  "wallet-name": {
-    "backgroundColor": "#f7f8fa",
-    "color": "#333333",
-    "paddingTop": "16",
-    "paddingRight": "32",
-    "paddingBottom": "16",
-    "paddingLeft": "32",
-    "fontSize": "28"
-  }
-}
-
-/***/ }),
-
-/***/ 75:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _WalletItem = __webpack_require__(2);
-
-var _WalletItem2 = _interopRequireDefault(_WalletItem);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var eeui = app.requireModule("eeui"); //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  components: {
-    WalletItem: _WalletItem2.default
-  },
-
-  data: function data() {
-    return {
-      walletList: [{
-        name: "BTC",
-        tag: "Bitcoin",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "ETH",
-        tag: "Ethereum",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "EOS",
-        tag: "Enterprise Operation System",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "BCH",
-        tag: "Bitcoin Cash",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "BSV",
-        tag: "Bitcoin SV",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "LTC",
-        tag: "Litecoin",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "ETC",
-        tag: "Ethereum Classic",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "ZEC",
-        tag: "Zcash",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "DASH",
-        tag: "Dash",
-        amount: "9999",
-        value: "999999"
-      }, {
-        name: "TRX",
-        tag: "TRON",
-        amount: "9999",
-        value: "999999"
-      }]
-    };
-  },
-
-  methods: {
-    itemClick: function itemClick(params) {
-      eeui.openPage({
-        url: 'transferDetails',
-        pageType: "app",
-        params: params
-      });
-    },
-    refreshListener: function refreshListener() {
-      var _this = this;
-
-      setTimeout(function () {
-        _this.$refs.reflectName.setHasMore(true);
-        _this.$refs.reflectName.refreshed();
-        eeui.toast({
-          message: "刷新成功",
-          gravity: "middle"
-        });
-      }, 1000);
-    }
-  }
-};
-
-/***/ }),
-
-/***/ 76:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["transfer"]
-  }, [_c('navbar', {
-    staticClass: ["transfer-navbar"]
-  }, [_c('navbar-item', {
-    attrs: {
-      "type": "back"
-    }
-  }), _c('navbar-item', {
-    attrs: {
-      "type": "title"
-    }
-  }, [_c('div', {
-    staticClass: ["transfer-navbar-main"]
-  }, [_c('text', {
-    staticClass: ["transfer-navbar-title"]
-  }, [_vm._v("转账币种选择")])])]), _c('navbar-item', {
-    attrs: {
-      "type": "right"
-    }
-  }, [_c('icon', {
-    staticClass: ["transfer-navbar-right"],
-    attrs: {
-      "content": "tb-search"
-    }
-  })], 1)], 1), _c('scroll-view', {
-    ref: "reflectName",
-    staticClass: ["wallet-list"],
-    attrs: {
-      "eeui": {
-        pullTips: true,
-      }
-    },
-    on: {
-      "refreshListener": _vm.refreshListener
-    }
-  }, [_c('text', {
-    staticClass: ["wallet-name"]
-  }, [_vm._v("当前钱包: 区块链韭菜")]), _vm._l((_vm.walletList), function(item, index) {
-    return _c('div', {
-      key: index,
-      on: {
-        "click": function($event) {
-          _vm.itemClick(item)
-        }
-      }
-    }, [_c('WalletItem', {
-      attrs: {
-        "icon": item.icon,
-        "name": item.name,
-        "tag": item.tag,
-        "amount": item.amount,
-        "value": item.value
-      }
-    })], 1)
-  })], 2)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

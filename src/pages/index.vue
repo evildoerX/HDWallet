@@ -33,14 +33,12 @@ export default {
         {
           title: "朋友",
           selectedIcon: "tb-group",
-          url:
-            "http://dotwe.org/raw/dist/fb6f016b0116969b6b503e1d3a35285f.bundle.wx",
+          url:"http://dotwe.org/raw/dist/fb6f016b0116969b6b503e1d3a35285f.bundle.wx",
         },
         {
           title: "我的",
           selectedIcon: "tb-my",
-          url:
-            "http://dotwe.org/raw/dist/ad0045a7cff0b3a680d9de6dd4806e81.bundle.wx",
+          url:"Ucenter",
         }
       ]
     };

@@ -62,273 +62,26 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 81);
+/******/ 	return __webpack_require__(__webpack_require__.s = 162);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 14:
+/***/ 162:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(15)
+__vue_styles__.push(__webpack_require__(163)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(16)
+__vue_exports__ = __webpack_require__(164)
 
 /* template */
-var __vue_template__ = __webpack_require__(17)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/components/Wallet/WalletManageCard/WalletManageCard.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-25cff9ee"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, exports) {
-
-module.exports = {
-  "walletCard": {
-    "borderRadius": "16",
-    "height": "280",
-    "width": "718",
-    "paddingTop": "32",
-    "paddingRight": "24",
-    "paddingBottom": "32",
-    "paddingLeft": "24",
-    "marginLeft": "16",
-    "marginRight": "16",
-    "backgroundImage": "linear-gradient(to right, #72a1ff, #3176ee)"
-  },
-  "walletCard-header": {
-    "flexDirection": "row",
-    "alignItems": "center",
-    "justifyContent": "space-between"
-  },
-  "walletCard-header_left": {
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "walletCard-header_lefttext": {
-    "fontSize": "32",
-    "fontWeight": "500",
-    "color": "#ffffff"
-  },
-  "walletCard-header_right": {
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "walletCard-header_righttext": {
-    "fontSize": "28",
-    "color": "#ffffff"
-  },
-  "walletCard-header_righticon": {
-    "width": "48",
-    "height": "48",
-    "fontSize": "32"
-  },
-  "walletCard-content": {
-    "marginTop": "64"
-  },
-  "walletCard-content_header": {
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "walletCard-content_header_text": {
-    "fontSize": "28",
-    "fontWeight": "500",
-    "color": "#ffffff"
-  },
-  "walletCard-content_header_icon": {
-    "marginLeft": "16",
-    "width": "32",
-    "height": "32",
-    "fontSize": "32",
-    "color": "#ffffff"
-  },
-  "walletCard-content_info": {
-    "flexDirection": "row",
-    "alignItems": "center",
-    "justifyContent": "space-between"
-  },
-  "walletCard-content_info_money": {
-    "marginTop": "16",
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "walletCard-content_info_mt": {
-    "color": "#ffffff",
-    "fontSize": "32"
-  },
-  "walletCard-content_info_value": {
-    "fontSize": "48",
-    "color": "#ffffff"
-  },
-  "walletCard-content_btn": {
-    "width": "64",
-    "height": "64",
-    "fontSize": "48",
-    "color": "#ffffff"
-  }
-}
-
-/***/ }),
-
-/***/ 16:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  props: {
-    defaultWallet: {
-      type: Boolean,
-      default: true
-    }
-  }
-};
-
-/***/ }),
-
-/***/ 17:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["walletCard"]
-  }, [_c('div', {
-    staticClass: ["walletCard-header"]
-  }, [_vm._m(0), _c('div', {
-    staticClass: ["walletCard-header_right"]
-  }, [_c('text', {
-    staticClass: ["walletCard-header_righttext"]
-  }, [_vm._v(_vm._s(_vm.defaultWallet ? '默认钱包' : '设置为默认钱吧'))]), _c('icon', {
-    staticClass: ["walletCard-header_righticon"],
-    style: {
-      color: _vm.defaultWallet ? '#ffffff' : '#cccccc'
-    },
-    attrs: {
-      "eeui": {
-        content: 'ios-checkmark-circle'
-      }
-    }
-  })], 1)]), _c('div', {
-    staticClass: ["walletCard-content"]
-  }, [_c('div', {
-    staticClass: ["walletCard-content_header"]
-  }, [_c('text', {
-    staticClass: ["walletCard-content_header_text"]
-  }, [_vm._v("多链钱包")]), _c('icon', {
-    staticClass: ["walletCard-content_header_icon"],
-    attrs: {
-      "eeui": {
-        content: 'ios-eye'
-      }
-    }
-  })], 1), _c('div', {
-    staticClass: ["walletCard-content_info"]
-  }, [_vm._m(1), _c('icon', {
-    staticClass: ["walletCard-content_btn"],
-    attrs: {
-      "eeui": {
-        content: 'tb-more'
-      }
-    }
-  })], 1)])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["walletCard-header_left"]
-  }, [_c('text', {
-    staticClass: ["walletCard-header_lefttext"]
-  }, [_vm._v("币圈韭菜")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["walletCard-content_info_money"]
-  }, [_c('text', {
-    staticClass: ["walletCard-content_info_mt"]
-  }, [_vm._v("$")]), _c('text', {
-    staticClass: ["walletCard-content_info_value"]
-  }, [_vm._v("123123123")])])
-}]}
-module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 81:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(82)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(83)
-
-/* template */
-var __vue_template__ = __webpack_require__(84)
+var __vue_template__ = __webpack_require__(165)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -361,7 +114,7 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 82:
+/***/ 163:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -407,7 +160,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 83:
+/***/ 164:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -417,7 +170,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _WalletManageCard = __webpack_require__(14);
+var _WalletManageCard = __webpack_require__(25);
 
 var _WalletManageCard2 = _interopRequireDefault(_WalletManageCard);
 
@@ -543,7 +296,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 84:
+/***/ 165:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -603,6 +356,253 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })], 1)
   }))], 1)
 },staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+
+/***/ 25:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(26)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(27)
+
+/* template */
+var __vue_template__ = __webpack_require__(28)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/components/Wallet/WalletManageCard/WalletManageCard.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-25cff9ee"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+
+/***/ 26:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "walletCard": {
+    "borderRadius": "16",
+    "height": "280",
+    "width": "718",
+    "paddingTop": "32",
+    "paddingRight": "24",
+    "paddingBottom": "32",
+    "paddingLeft": "24",
+    "marginLeft": "16",
+    "marginRight": "16",
+    "backgroundImage": "linear-gradient(to right, #72a1ff, #3176ee)"
+  },
+  "walletCard-header": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "space-between"
+  },
+  "walletCard-header_left": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "walletCard-header_lefttext": {
+    "fontSize": "32",
+    "fontWeight": "500",
+    "color": "#ffffff"
+  },
+  "walletCard-header_right": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "walletCard-header_righttext": {
+    "fontSize": "28",
+    "color": "#ffffff"
+  },
+  "walletCard-header_righticon": {
+    "width": "48",
+    "height": "48",
+    "fontSize": "32"
+  },
+  "walletCard-content": {
+    "marginTop": "64"
+  },
+  "walletCard-content_header": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "walletCard-content_header_text": {
+    "fontSize": "28",
+    "fontWeight": "500",
+    "color": "#ffffff"
+  },
+  "walletCard-content_header_icon": {
+    "marginLeft": "16",
+    "width": "32",
+    "height": "32",
+    "fontSize": "32",
+    "color": "#ffffff"
+  },
+  "walletCard-content_info": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "space-between"
+  },
+  "walletCard-content_info_money": {
+    "marginTop": "16",
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "walletCard-content_info_mt": {
+    "color": "#ffffff",
+    "fontSize": "32"
+  },
+  "walletCard-content_info_value": {
+    "fontSize": "48",
+    "color": "#ffffff"
+  },
+  "walletCard-content_btn": {
+    "width": "64",
+    "height": "64",
+    "fontSize": "48",
+    "color": "#ffffff"
+  }
+}
+
+/***/ }),
+
+/***/ 27:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    defaultWallet: {
+      type: Boolean,
+      default: true
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 28:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["walletCard"]
+  }, [_c('div', {
+    staticClass: ["walletCard-header"]
+  }, [_vm._m(0), _c('div', {
+    staticClass: ["walletCard-header_right"]
+  }, [_c('text', {
+    staticClass: ["walletCard-header_righttext"]
+  }, [_vm._v(_vm._s(_vm.defaultWallet ? '默认钱包' : '设置为默认钱吧'))]), _c('icon', {
+    staticClass: ["walletCard-header_righticon"],
+    style: {
+      color: _vm.defaultWallet ? '#ffffff' : '#cccccc'
+    },
+    attrs: {
+      "eeui": {
+        content: 'ios-checkmark-circle'
+      }
+    }
+  })], 1)]), _c('div', {
+    staticClass: ["walletCard-content"]
+  }, [_c('div', {
+    staticClass: ["walletCard-content_header"]
+  }, [_c('text', {
+    staticClass: ["walletCard-content_header_text"]
+  }, [_vm._v("多链钱包")]), _c('icon', {
+    staticClass: ["walletCard-content_header_icon"],
+    attrs: {
+      "eeui": {
+        content: 'ios-eye'
+      }
+    }
+  })], 1), _c('div', {
+    staticClass: ["walletCard-content_info"]
+  }, [_vm._m(1), _c('icon', {
+    staticClass: ["walletCard-content_btn"],
+    attrs: {
+      "eeui": {
+        content: 'tb-more'
+      }
+    }
+  })], 1)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["walletCard-header_left"]
+  }, [_c('text', {
+    staticClass: ["walletCard-header_lefttext"]
+  }, [_vm._v("币圈韭菜")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["walletCard-content_info_money"]
+  }, [_c('text', {
+    staticClass: ["walletCard-content_info_mt"]
+  }, [_vm._v("$")]), _c('text', {
+    staticClass: ["walletCard-content_info_value"]
+  }, [_vm._v("123123123")])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ })
