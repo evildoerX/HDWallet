@@ -15,18 +15,17 @@
       ref="reflectName"
       class="wallet-list"
       :eeui="{ pullTips: true, }"
-      @itemClick="itemClick"
       @refreshListener="refreshListener"
     >
-      <WalletItem
-        v-for="(item, index) in walletList"
-        :key="index"
-        :icon="item.icon"
-        :name="item.name"
-        :tag="item.tag"
-        :amount="item.amount"
-        :value="item.value"
-      />
+      <div v-for="(item, index) in walletList" :key="index" @click="itemClick(item)">
+        <WalletItem
+          :icon="item.icon"
+          :name="item.name"
+          :tag="item.tag"
+          :amount="item.amount"
+          :value="item.value"
+        />
+      </div>
     </scroll-view>
   </div>
 </template>
@@ -108,7 +107,11 @@ export default {
   },
   methods: {
     itemClick(params) {
-      eeui.toast("点击了" + (params));
+      eeui.openPage({
+        url: 'transferDetails',
+        pageType: "app",
+        params: params,
+      });
     },
     refreshListener() {
       setTimeout(() => {

@@ -1,147 +1,231 @@
 <template>
-  <div class="transfer">
-    <navbar class="transfer-navbar">
+  <div class="transferdetails">
+    <navbar class="transferdetails-navbar">
       <navbar-item type="back"></navbar-item>
       <navbar-item type="title">
-        <div class="transfer-navbar-main">
-          <text class="transfer-navbar-title">转账币种选择</text>
+        <div class="transferdetails-navbar-main">
+          <text class="transferdetails-navbar-title">{{asset.name}}转账</text>
         </div>
       </navbar-item>
       <navbar-item type="right">
-        <icon content="tb-search" class="transfer-navbar-right"></icon>
+        <icon content="tb-scan" class="transferdetails-navbar-right"></icon>
       </navbar-item>
     </navbar>
-    <scroll-view
-      ref="reflectName"
-      class="wallet-list"
-      :eeui="{ pullTips: true, }"
-      @refreshListener="refreshListener"
-    >
-      <WalletItem
-        v-for="(item, index) in walletList"
-        :key="index"
-        :icon="item.icon"
-        :name="item.name"
-        :tag="item.tag"
-        :amount="item.amount"
-        :value="item.value"
-      />
-    </scroll-view>
+    <div class="transferdetails-content">
+      <div class="transferdetails-content_item">
+        <div class="transferdetails-content_itemtitle">
+          <text class="transferdetails-content_itemtitle_label">收款地址</text>
+          <icon content="tb-scan" class="transferdetails-content_itemtitle_right"></icon>
+        </div>
+        <input class="transferdetails-content_iteminput" type="text" placeholder="请输入转账地址"/>
+      </div>
+      <div class="transferdetails-content_item">
+        <div class="transferdetails-content_itemtitle">
+          <text class="transferdetails-content_itemtitle_label">地址备注(选填)</text>
+        </div>
+        <input class="transferdetails-content_iteminput" type="text" placeholder="设置地址备注"/>
+      </div>
+      <div class="transferdetails-content_item">
+        <div class="transferdetails-content_itemtitle">
+          <text class="transferdetails-content_itemtitle_label">转账金额</text>
+        </div>
+        <div class="transferdetails-content_transfermoney">
+          <div class="transferdetails-content_transfermoney_item">
+            <input class="transferdetails-content_transfermoney_input" type="number" :value="0"/>
+            <text class="transferdetails-content_transfermoney_label">BTC</text>
+          </div>
+          <div>
+            <text class="transferdetails-content_itemtitle_label">≈</text>
+          </div>
+          <div>
+            <input class="transferdetails-content_transfermoney_input input-right" type="number" :value="0"/>
+            <text class="transferdetails-content_transfermoney_label input-right">USDT</text>
+          </div>
+        </div>
+      </div>
+      <div class="transferdetails-content_item">
+        <div class="transferdetails-content_itemtitle">
+          <text class="transferdetails-content_itemtitle_label">付款地址</text>
+          <div>
+            <text style="color:#9a9a9a">更换 ></text>
+          </div>
+        </div>
+        <div class="transferdetails-content_transferaddress">
+          <div class="transferdetails-content_transferaddress_info">
+            <text class="transferdetails-content_transferaddress_name">区块链大神</text>
+            <div class="transferdetails-content_transferaddress_info">
+              <text class="transferdetails-content_transferaddress_label">余额</text>
+              <text class="transferdetails-content_transferaddress_money">0 BTC</text>
+            </div>
+          </div>
+          <text class="transferdetails-content_transferaddress_tips">Df7EDadC0795519fdC7284A67547670F08C5E0</text>
+        </div>
+      </div>
+      <div class="transferdetails-content_item">
+        <div class="transferdetails-content_itemtitle">
+          <text class="transferdetails-content_itemtitle_label">旷工费用</text>
+          <div>
+            <text style="color:#9a9a9a">修改 ></text>
+          </div>
+        </div>
+        <text class="transferdetails-content_iteminfo">0.000045 BTC ≈ 0.52 USDT</text>
+      </div>
+      <button class="transferdetails-content_button" :eeui="{text:'确认转账'}"></button>
+    </div>
   </div>
 </template>
 
 <script>
-import WalletItem from "../components/Wallet/WalletItem/WalletItem";
 var eeui = app.requireModule("eeui");
 
 export default {
-  components: {
-    WalletItem
-  },
-
   data() {
     return {
-      walletList: [
-        {
-          name: "BTC",
-          tag: "Bitcoin",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "ETH",
-          tag: "Ethereum",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "EOS",
-          tag: "Enterprise Operation System",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "BCH",
-          tag: "Bitcoin Cash",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "BSV",
-          tag: "Bitcoin SV",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "LTC",
-          tag: "Litecoin",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "ETC",
-          tag: "Ethereum Classic",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "ZEC",
-          tag: "Zcash",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "DASH",
-          tag: "Dash",
-          amount: "9999",
-          value: "999999"
-        },
-        {
-          name: "TRX",
-          tag: "TRON",
-          amount: "9999",
-          value: "999999"
-        }
-      ]
+      asset: {},
+      assetAddress: "0x58Df7EDadC0795519fdC7284A67547670F08C5E0"
     };
   },
+  mounted() {
+    this.asset = app.config.params ? app.config.params : "error";
+  },
   methods: {
-    refreshListener() {
-      setTimeout(() => {
-        this.$refs.reflectName.setHasMore(true);
-        this.$refs.reflectName.refreshed();
-        eeui.toast({
-          message: "刷新成功",
-          gravity: "middle"
-        });
-      }, 1000);
+    copyText() {
+      eeui.copyText(this.assetAddress);
+      eeui.toast({
+        message: "复制成功",
+        gravity: "middle"
+      });
+    },
+    cropyText(str) {
+      let t = "";
+      t = str.slice(0, 10) + "******" + str.substring(32);
+      return t;
     }
   }
 };
 </script>
 
 <style scoped>
-.transfer {
+.transferdetails {
   width: 750px;
   flex: 1;
 }
-.transfer-navbar {
+.transferdetails-navbar {
   width: 750px;
   height: 100px;
 }
 
-.transfer-navbar-main {
+.transferdetails-navbar-main {
   flex-direction: row;
   align-items: center;
 }
 
-.transfer-navbar-title {
+.transferdetails-navbar-title {
   font-size: 32px;
   color: #ffffff;
 }
-.transfer-navbar-right {
+.transferdetails-navbar-right {
   width: 100px;
   height: 100px;
   color: #ffffff;
+}
+.transferdetails-content {
+  margin-top: 64px;
+  width: 750px;
+  flex: 1;
+  align-items: center;
+  /* justify-content: center; */
+}
+.transferdetails-content_item {
+  width: 750px;
+  padding: 0 32px;
+  margin-top: 40px;
+}
+.transferdetails-content_itemtitle {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.transferdetails-content_itemtitle_right {
+  width: 64px;
+  height: 64px;
+  font-size: 40px;
+}
+.transferdetails-content_iteminput {
+  background-color: #f8f9fa;
+  padding: 16px 32px;
+  height: 80px;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.transferdetails-content_button {
+  font-size: 24px;
+  margin-left: 38px;
+  margin-right: 38px;
+  margin-top: 64px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 80px;
+}
+.transferdetails-content_transfermoney {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px 32px;
+}
+.transferdetails-content_transfermoney_item {
+
+}
+.transferdetails-content_transfermoney_input {
+  padding-left: 10px;
+  height: 80px;
+  font-size: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+.transferdetails-content_transfermoney_label {
+  color: #999999;
+  font-size: 24px;
+}
+.input-right {
+  text-align: right;
+}
+
+.transferdetails-content_transferaddress {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px 32px;
+}
+.transferdetails-content_transferaddress_info {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.transferdetails-content_transferaddress_name {
+  font-size: 32px;
+}
+.transferdetails-content_transferaddress_label {
+  color: #a2a2a2;
+  font-size: 28px;
+}
+.transferdetails-content_transferaddress_money {
+  margin-left: 26px;
+  font-size: 28px;
+  color: #3075ee;
+}
+.transferdetails-content_transferaddress_tips {
+  color: #a2a2a2;
+  font-size: 24px;
+  margin-top: 8px;
+}
+.transferdetails-content_iteminfo {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px 32px;
+  height: 80px;
+  line-height: 50px;
 }
 </style>

@@ -366,7 +366,6 @@ var eeui = app.requireModule("eeui"); //
 //
 //
 //
-//
 
 exports.default = {
   components: {
@@ -431,7 +430,11 @@ exports.default = {
 
   methods: {
     itemClick: function itemClick(params) {
-      eeui.toast("点击了" + params);
+      eeui.openPage({
+        url: 'transferDetails',
+        pageType: "app",
+        params: params
+      });
     },
     refreshListener: function refreshListener() {
       var _this = this;
@@ -488,12 +491,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     },
     on: {
-      "itemClick": _vm.itemClick,
       "refreshListener": _vm.refreshListener
     }
   }, _vm._l((_vm.walletList), function(item, index) {
-    return _c('WalletItem', {
+    return _c('div', {
       key: index,
+      on: {
+        "click": function($event) {
+          _vm.itemClick(item)
+        }
+      }
+    }, [_c('WalletItem', {
       attrs: {
         "icon": item.icon,
         "name": item.name,
@@ -501,7 +509,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "amount": item.amount,
         "value": item.value
       }
-    })
+    })], 1)
   }))], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
