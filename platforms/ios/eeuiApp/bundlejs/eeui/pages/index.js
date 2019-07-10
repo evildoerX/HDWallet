@@ -62,26 +62,26 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 54);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 24:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(25)
+__vue_styles__.push(__webpack_require__(55)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(26)
+__vue_exports__ = __webpack_require__(56)
 
 /* template */
-var __vue_template__ = __webpack_require__(27)
+var __vue_template__ = __webpack_require__(57)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -114,7 +114,7 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 25:
+/***/ 55:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -129,7 +129,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 26:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -162,11 +162,11 @@ exports.default = {
       tabPages: [{
         title: "资产",
         selectedIcon: "tb-home",
-        url: "./assets"
+        url: "assets"
       }, {
         title: "财富",
         selectedIcon: "tb-recharge",
-        url: "./test"
+        url: "market"
       }, {
         title: "朋友",
         selectedIcon: "tb-group",
@@ -182,7 +182,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 27:
+/***/ 57:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

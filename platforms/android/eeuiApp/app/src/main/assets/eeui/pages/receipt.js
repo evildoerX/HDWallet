@@ -62,26 +62,26 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 58);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 0:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(1)
+__vue_styles__.push(__webpack_require__(3)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(2)
+__vue_exports__ = __webpack_require__(4)
 
 /* template */
-var __vue_template__ = __webpack_require__(3)
+var __vue_template__ = __webpack_require__(5)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -112,7 +112,7 @@ module.exports = __vue_exports__
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -163,7 +163,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -211,21 +211,52 @@ exports.default = {
 
 /***/ }),
 
-/***/ 28:
+/***/ 5:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["walletitem"]
+  }, [_c('image', {
+    staticClass: ["walletitem-logo"],
+    attrs: {
+      "src": ("../assets/AssetLogo/" + _vm.name + ".png")
+    }
+  }), _c('div', {
+    staticClass: ["walletitem-group"]
+  }, [_c('div', {
+    staticClass: ["walletitem-group_info"]
+  }, [_c('text', {
+    staticClass: ["walletitem-group_info_name"]
+  }, [_vm._v(_vm._s(_vm.name))]), _c('text', {
+    staticClass: ["walletitem-group_info_label"]
+  }, [_vm._v(_vm._s(_vm.tag))])]), _c('div', {
+    staticClass: ["walletitem-group_price"]
+  }, [_c('text', {
+    staticClass: ["walletitem-group_price_name"]
+  }, [_vm._v(_vm._s(_vm.amount))]), _c('text', {
+    staticClass: ["walletitem-group_price_label"]
+  }, [_vm._v("≈$" + _vm._s(_vm.value))])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(29)
+__vue_styles__.push(__webpack_require__(59)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(30)
+__vue_exports__ = __webpack_require__(60)
 
 /* template */
-var __vue_template__ = __webpack_require__(31)
+var __vue_template__ = __webpack_require__(61)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -258,7 +289,7 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 29:
+/***/ 59:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -296,38 +327,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["walletitem"]
-  }, [_c('image', {
-    staticClass: ["walletitem-logo"],
-    attrs: {
-      "src": ("../assets/AssetLogo/" + _vm.name + ".png")
-    }
-  }), _c('div', {
-    staticClass: ["walletitem-group"]
-  }, [_c('div', {
-    staticClass: ["walletitem-group_info"]
-  }, [_c('text', {
-    staticClass: ["walletitem-group_info_name"]
-  }, [_vm._v(_vm._s(_vm.name))]), _c('text', {
-    staticClass: ["walletitem-group_info_label"]
-  }, [_vm._v(_vm._s(_vm.tag))])]), _c('div', {
-    staticClass: ["walletitem-group_price"]
-  }, [_c('text', {
-    staticClass: ["walletitem-group_price_name"]
-  }, [_vm._v(_vm._s(_vm.amount))]), _c('text', {
-    staticClass: ["walletitem-group_price_label"]
-  }, [_vm._v("≈$" + _vm._s(_vm.value))])])])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 30:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -337,7 +337,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _WalletItem = __webpack_require__(0);
+var _WalletItem = __webpack_require__(2);
 
 var _WalletItem2 = _interopRequireDefault(_WalletItem);
 
@@ -463,7 +463,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 31:
+/***/ 61:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

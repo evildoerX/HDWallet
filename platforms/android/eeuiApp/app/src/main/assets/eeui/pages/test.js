@@ -62,26 +62,26 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 36);
+/******/ 	return __webpack_require__(__webpack_require__.s = 66);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 36:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(37)
+__vue_styles__.push(__webpack_require__(67)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(38)
+__vue_exports__ = __webpack_require__(68)
 
 /* template */
-var __vue_template__ = __webpack_require__(40)
+var __vue_template__ = __webpack_require__(70)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -114,7 +114,7 @@ new Vue(module.exports)
 
 /***/ }),
 
-/***/ 37:
+/***/ 67:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -221,7 +221,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 38:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -231,11 +231,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _global = __webpack_require__(39);
+var _global = __webpack_require__(69);
 
 // import ScrollNotice from "../components/scrollNotice.vue";
 
-var weiui = weex.requireModule('weiui'); //
+var eeui = weex.requireModule('eeui'); //
 //
 //
 //
@@ -359,7 +359,7 @@ exports.default = {
     mixins: [{
         methods: {
             getStatusBarHeightPx: function getStatusBarHeightPx() {
-                return weiui.getStatusBarHeightPx();
+                return eeui.getStatusBarHeightPx();
             }
         }
     }],
@@ -374,7 +374,7 @@ exports.default = {
         return {
             loadIng: 0,
 
-            isIPhoneXType: weiui.isIPhoneXType(),
+            isIPhoneXType: eeui.isIPhoneXType(),
 
             swiperShow: true,
             swiperLists: [],
@@ -461,13 +461,13 @@ exports.default = {
             switch (item.action) {
                 case "toast":
                     if ((0, _global.count)(item.paramet.toast) > 0) {
-                        weiui.toast(item.paramet.toast);
+                        eeui.toast(item.paramet.toast);
                     }
                     break;
 
                 case "product":
                     if ((0, _global.runNum)(item.paramet.productid) > 0) {
-                        weiui.openPage({
+                        eeui.openPage({
                             url: 'product.js',
                             pageType: 'weex',
                             statusBarType: "immersion",
@@ -478,7 +478,7 @@ exports.default = {
 
                 case "web":
                     if ((0, _global.count)(item.paramet.url) > 5) {
-                        weiui.openPage({
+                        eeui.openPage({
                             url: 'assets.js',
                             pageType: 'weex',
                             statusBarColor: "#E31D1A",
@@ -494,7 +494,7 @@ exports.default = {
         },
         noticeClick: function noticeClick(index, item) {
             var url = serverUrl('mobile#/notice?id=' + item.id + '&platform=' + platform() + '&token=' + getToken());
-            weiui.openPage({
+            eeui.openPage({
                 url: 'assets.js',
                 pageType: 'weex',
                 statusBarColor: "#E31D1A",
@@ -541,7 +541,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 39:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1093,7 +1093,7 @@ module.exports = global;
 
 /***/ }),
 
-/***/ 40:
+/***/ 70:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1109,7 +1109,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["list"],
     attrs: {
       "refreshAuto": "true",
-      "weiui": {
+      "eeui": {
         pullTipsNo: ''
       }
     },

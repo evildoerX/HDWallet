@@ -4,7 +4,7 @@
 
         <div v-if="isIPhoneXType" class="immersion" :style="{height:getStatusBarHeightPx()}"></div>
 
-        <scroll-view class="list" ref="myLists" refreshAuto="true" @refreshListener="refresh" @pullLoadListener="pullLoad" :weiui="{pullTipsNo:''}">
+        <scroll-view class="list" ref="myLists" refreshAuto="true" @refreshListener="refresh" @pullLoadListener="pullLoad" :eeui="{pullTipsNo:''}">
 
             <banner class="swiper" v-if="swiperShow" @itemClick="clickSwiper">
                 <div class="swiper-frame" v-for="item in swiperLists">
@@ -120,14 +120,14 @@
     import {count, runNum, isObject, each, jsonParse, getObject} from "../../common/js/global";
     // import ScrollNotice from "../components/scrollNotice.vue";
 
-    const weiui = weex.requireModule('weiui');
+    const eeui = weex.requireModule('eeui');
 
     export default {
         // components: {ScrollNotice},
         mixins: [{
             methods: {
                 getStatusBarHeightPx() {
-                    return weiui.getStatusBarHeightPx();
+                    return eeui.getStatusBarHeightPx();
                 },
             }
         }],
@@ -142,7 +142,7 @@
             return {
                 loadIng: 0,
 
-                isIPhoneXType: weiui.isIPhoneXType(),
+                isIPhoneXType: eeui.isIPhoneXType(),
 
                 swiperShow: true,
                 swiperLists: [],
@@ -231,13 +231,13 @@
                 switch (item.action) {
                     case "toast":
                         if (count(item.paramet.toast) > 0) {
-                            weiui.toast(item.paramet.toast);
+                            eeui.toast(item.paramet.toast);
                         }
                         break;
 
                     case "product":
                         if (runNum(item.paramet.productid) > 0) {
-                            weiui.openPage({
+                            eeui.openPage({
                                 url: 'product.js',
                                 pageType: 'weex',
                                 statusBarType: "immersion",
@@ -248,7 +248,7 @@
 
                     case "web":
                         if (count(item.paramet.url) > 5) {
-                            weiui.openPage({
+                            eeui.openPage({
                                 url: 'assets.js',
                                 pageType: 'weex',
                                 statusBarColor: "#E31D1A",
@@ -267,7 +267,7 @@
 
             noticeClick(index, item) {
                 let url = serverUrl(`mobile#/notice?id=${item.id}&platform=${platform()}&token=${getToken()}`);
-                weiui.openPage({
+                eeui.openPage({
                     url: 'assets.js',
                     pageType: 'weex',
                     statusBarColor: "#E31D1A",

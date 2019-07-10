@@ -23,12 +23,12 @@ export default {
         {
           title: "资产",
           selectedIcon: "tb-home",
-          url: "./assets",
+          url: "assets",
         },
         {
           title: "财富",
           selectedIcon: "tb-recharge",
-          url:"./test",
+          url:"market",
         },
         {
           title: "朋友",
