@@ -4,15 +4,15 @@
       <icon class="tool-item_icon" :eeui="{ content: 'tb-scan' }"></icon>
       <text class="tool-item_text">扫一扫</text>
     </div>
-    <div class="tool-item">
+    <div class="tool-item" @click="openUrl('receipt')">
       <icon class="tool-item_icon" :eeui="{ content: 'tb-qrcode' }"></icon>
       <text class="tool-item_text">收款</text>
     </div>
-    <div class="tool-item">
+    <div class="tool-item" @click="openUrl('transfer')">
       <icon class="tool-item_icon" :eeui="{ content: 'tb-refund' }"></icon>
       <text class="tool-item_text">转账</text>
     </div>
-    <div class="tool-item">
+    <div class="tool-item" @click="openUrl('transactionLog')">
       <icon class="tool-item_icon" :eeui="{ content: 'tb-text' }"></icon>
       <text class="tool-item_text">交易明细</text>
     </div>
@@ -34,6 +34,12 @@ export default {
             eeui.toast("识别失败");
             break;
         }
+      });
+    },
+    openUrl(url) {
+      eeui.openPage({
+        url: url,
+        pageType: "app"
       });
     }
   }
