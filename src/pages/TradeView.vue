@@ -21,12 +21,10 @@
 </template>
 
 <script>
-import TradeViewHeader from "../components/TradeView/TradeViewHeader.vue";
 import TradeViewInfo from "../components/TradeView/TradeViewInfo.vue";
 import TradeviewButton from "../components/TradeView/TradeviewButton.vue";
 export default {
   components: {
-    TradeViewHeader,
     TradeViewInfo,
     TradeviewButton
   },

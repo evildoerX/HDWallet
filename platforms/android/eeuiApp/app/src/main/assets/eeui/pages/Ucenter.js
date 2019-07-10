@@ -829,10 +829,26 @@ module.exports = {
   "ucenterheader": {
     "width": "750",
     "backgroundImage": "linear-gradient(to right, #2d8cf0, #569ffa)",
-    "paddingTop": "50",
     "paddingBottom": "32",
     "borderBottomRightRadius": "32",
     "borderBottomLeftRadius": "32"
+  },
+  "asset-navbar": {
+    "width": "750",
+    "height": "100"
+  },
+  "asset-navbar-main": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "asset-navbar-title": {
+    "fontSize": "32",
+    "color": "#ffffff"
+  },
+  "asset-navbar-right": {
+    "width": "100",
+    "height": "100",
+    "color": "#ffffff"
   },
   "ucenterheader-back": {
     "width": "100",
@@ -893,7 +909,6 @@ var _UcenterLoginInfo2 = _interopRequireDefault(_UcenterLoginInfo);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var eeui = weex.requireModule("eeui"); //
-//
 //
 //
 //
@@ -1330,26 +1345,17 @@ module.exports.render._withStripped = true
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["ucenterheader"]
-  }, [_c('OHeader', [_c('div', {
+  }, [_c('navbar', {
+    staticClass: ["asset-navbar"]
+  }, [_c('navbar-item', {
     attrs: {
-      "slot": "left"
-    },
-    on: {
-      "click": function($event) {
-        _vm.back()
-      }
-    },
-    slot: "left"
-  }, [_c('icon', {
-    staticClass: ["ucenterheader-back"],
-    attrs: {
-      "eeui": {
-        content: 'ios-arrow-back',
-        fontSize: 40,
-        color: '#fff',
-      }
+      "type": "title"
     }
-  })], 1)]), (_vm.needLogin) ? _c('NeedLogin') : _c('UcenterLoginInfo', {
+  }, [_c('div', {
+    staticClass: ["asset-navbar-main"]
+  }, [_c('text', {
+    staticClass: ["asset-navbar-title"]
+  }, [_vm._v("资产")])])])], 1), (_vm.needLogin) ? _c('NeedLogin') : _c('UcenterLoginInfo', {
     attrs: {
       "userName": _vm.accountData.username
     }

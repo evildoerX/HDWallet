@@ -11,7 +11,7 @@
       </navbar-item>
     </navbar>
     <Tool />
-    <Wallet />
+    <Wallet class="asset-wallet"/>
   </div>
 </template>
 
@@ -79,5 +79,8 @@ export default {
   width: 100px;
   height: 100px;
   color: #ffffff;
+}
+.asset-wallet {
+  margin-top: -8px;
 }
 </style>

@@ -137,6 +137,9 @@ module.exports = {
     "width": "100",
     "height": "100",
     "color": "#ffffff"
+  },
+  "asset-wallet": {
+    "marginTop": "-8"
   }
 }
 
@@ -903,7 +906,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "content": "ios-wallet"
     }
-  })], 1)], 1), _c('Tool'), _c('Wallet')], 1)
+  })], 1)], 1), _c('Tool'), _c('Wallet', {
+    staticClass: ["asset-wallet"]
+  })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

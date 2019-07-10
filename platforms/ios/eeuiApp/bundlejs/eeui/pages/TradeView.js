@@ -67,174 +67,6 @@ if(typeof app=="undefined"){app=weex}
 /************************************************************************/
 /******/ ({
 
-/***/ 21:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(22)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(23)
-
-/* template */
-var __vue_template__ = __webpack_require__(24)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/components/UI/NavBar/O-Header.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-42ac0a1f"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-
-/***/ 22:
-/***/ (function(module, exports) {
-
-module.exports = {
-  "o-header-content": {
-    "width": "750",
-    "flexDirection": "row",
-    "justifyContent": "space-between",
-    "alignItems": "center",
-    "paddingRight": "36"
-  },
-  "o-header-content-border": {
-    "borderBottomColor": "#e5e5e5",
-    "borderBottomStyle": "solid",
-    "borderBottomWidth": "1"
-  },
-  "o-header-content-normal": {
-    "height": "93"
-  },
-  "o-header-content-iOS": {
-    "height": "133",
-    "paddingTop": "46"
-  },
-  "o-header-left": {
-    "flexDirection": "row",
-    "flex": 1
-  },
-  "o-header-right": {
-    "flexDirection": "row",
-    "justifyContent": "flex-end",
-    "flex": 1
-  },
-  "o-header-title": {
-    "flex": 3,
-    "fontSize": "36",
-    "fontWeight": "400",
-    "textAlign": "center"
-  }
-}
-
-/***/ }),
-
-/***/ 23:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  name: "OHeader",
-  props: {
-    bgcolor: {
-      type: String,
-      default: ""
-    },
-    title: {
-      default: ""
-    },
-    titlecolor: {
-      default: "#000000"
-    },
-    bottomborder: {
-      type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    iOSstat: function iOSstat() {
-      var type = WXEnvironment.platform;
-      console.log(this.bottomborder);
-      return [type === "iOS" ? "o-header-content-iOS" : "o-header-content-normal", this.bottomborder ? "o-header-content-border" : ""];
-    }
-  }
-};
-
-/***/ }),
-
-/***/ 24:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["o-header-content"],
-    class: _vm.iOSstat,
-    style: {
-      'background-color': _vm.bgcolor
-    }
-  }, [_c('div', {
-    staticClass: ["o-header-left"]
-  }, [_vm._t("left")], 2), _c('div', {
-    staticClass: ["o-header-center"]
-  }, [(!_vm.$slots.center) ? _c('text', {
-    staticClass: ["o-header-title"],
-    style: {
-      color: _vm.titlecolor
-    }
-  }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), _vm._t("center")], 2), _c('div', {
-    staticClass: ["o-header-right"]
-  }, [_vm._t("right")], 2)])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-
 /***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -335,10 +167,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _TradeViewHeader = __webpack_require__(82);
-
-var _TradeViewHeader2 = _interopRequireDefault(_TradeViewHeader);
-
 var _TradeViewInfo = __webpack_require__(86);
 
 var _TradeViewInfo2 = _interopRequireDefault(_TradeViewInfo);
@@ -349,9 +177,31 @@ var _TradeviewButton2 = _interopRequireDefault(_TradeviewButton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 exports.default = {
   components: {
-    TradeViewHeader: _TradeViewHeader2.default,
     TradeViewInfo: _TradeViewInfo2.default,
     TradeviewButton: _TradeviewButton2.default
   },
@@ -368,243 +218,7 @@ exports.default = {
   },
 
   methods: {}
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/***/ }),
-
-/***/ 82:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(83)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(84)
-
-/* template */
-var __vue_template__ = __webpack_require__(85)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/components/TradeView/TradeViewHeader.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-68940a10"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-
-/***/ 83:
-/***/ (function(module, exports) {
-
-module.exports = {
-  "TradeViewHeader": {
-    "paddingTop": "50"
-  },
-  "TradeViewHeader-content": {
-    "flexDirection": "row"
-  },
-  "TradeViewHeader-content-left": {
-    "width": "100",
-    "minHeight": "50"
-  },
-  "TradeViewHeader-content-icon": {
-    "width": "60",
-    "height": "60"
-  },
-  "TradeViewHeader-right": {
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "TradeViewHeader-navbar": {
-    "width": "750",
-    "height": "100"
-  },
-  "TradeViewHeader-title": {
-    "fontSize": "32",
-    "color": "#ffffff"
-  },
-  "TradeViewHeader-iconr": {
-    "width": "100",
-    "height": "100",
-    "color": "#ffffff"
-  }
-}
-
-/***/ }),
-
-/***/ 84:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _OHeader = __webpack_require__(21);
-
-var _OHeader2 = _interopRequireDefault(_OHeader);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var eeui = weex.requireModule("eeui"); //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var navigator = weex.requireModule("navigator");
-exports.default = {
-  name: "TradeViewHeader",
-  components: {
-    OHeader: _OHeader2.default
-  },
-  props: {
-    marketInfo: Object
-  },
-  data: function data() {
-    return {};
-  },
-
-  computed: {},
-  methods: {
-    back: function back() {
-      navigator.pop();
-    }
-  }
 };
-
-/***/ }),
-
-/***/ 85:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["TradeViewHeader"]
-  }, [_c('OHeader', {
-    staticClass: ["TradeViewHeader-content"]
-  }, [_c('div', {
-    staticClass: ["TradeViewHeader-content-left"],
-    attrs: {
-      "slot": "left"
-    },
-    on: {
-      "click": function($event) {
-        _vm.back()
-      }
-    },
-    slot: "left"
-  }, [_c('icon', {
-    staticClass: ["TradeViewHeader-content-icon"],
-    attrs: {
-      "eeui": {
-        content: 'ios-arrow-back',
-        fontSize: 40,
-        color: '#fff',
-      }
-    }
-  })], 1), _c('div', {
-    attrs: {
-      "slot": "center"
-    },
-    slot: "center"
-  }, [_c('text', {
-    staticClass: ["TradeViewHeader-title"]
-  }, [_vm._v(_vm._s(((_vm.marketInfo.stock) + " / " + (_vm.marketInfo.money))))])]), _c('div', {
-    staticClass: ["TradeViewHeader-right"],
-    attrs: {
-      "slot": "right"
-    },
-    slot: "right"
-  }, [_c('icon', {
-    staticClass: ["TradeViewHeader-content-icon"],
-    attrs: {
-      "eeui": {
-        content: 'ios-notifications-outline',
-        fontSize: 40,
-        color: '#fff',
-      }
-    }
-  }), _c('icon', {
-    staticClass: ["TradeViewHeader-content-icon"],
-    attrs: {
-      "eeui": {
-        content: 'tb-share-light',
-        fontSize: 40,
-        color: '#fff',
-      }
-    }
-  })], 1)])], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
 
 /***/ }),
 

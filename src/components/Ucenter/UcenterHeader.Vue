@@ -1,13 +1,12 @@
 <template>
   <div class="ucenterheader">
-    <OHeader>
-      <div slot="left" @click="back()">
-        <icon
-          class="ucenterheader-back"
-          :eeui="{ content: 'ios-arrow-back', fontSize: 40, color:'#fff', }"
-        ></icon>
-      </div>
-    </OHeader>
+    <navbar class="asset-navbar">
+      <navbar-item type="title">
+        <div class="asset-navbar-main">
+          <text class="asset-navbar-title">资产</text>
+        </div>
+      </navbar-item>
+    </navbar>
     <NeedLogin v-if="needLogin"/>
     <UcenterLoginInfo v-else :userName="accountData.username"/>
   </div>
@@ -60,10 +59,28 @@ export default {
 .ucenterheader {
   width: 750px;
   background-image: linear-gradient(to right, #2d8cf0, #569ffa);
-  padding-top: 50px;
   padding-bottom: 32px;
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
+}
+.asset-navbar {
+  width: 750px;
+  height: 100px;
+}
+
+.asset-navbar-main {
+  flex-direction: row;
+  align-items: center;
+}
+
+.asset-navbar-title {
+  font-size: 32px;
+  color: #ffffff;
+}
+.asset-navbar-right{
+  width: 100px;
+  height: 100px;
+  color: #ffffff;
 }
 .ucenterheader-back {
   width: 100px;
