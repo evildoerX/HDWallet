@@ -62,12 +62,12 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 23:
+/***/ 55:
 /***/ (function(module, exports) {
 
 var __vue_exports__, __vue_options__
@@ -83,7 +83,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/friend.vue"
+__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/walletDetails.vue"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {

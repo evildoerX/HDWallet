@@ -6,6 +6,9 @@
           <text class="asset-navbar-title">资产</text>
         </div>
       </navbar-item>
+      <navbar-item type="right" @click="WMClick">
+        <icon content="ios-wallet" class="asset-navbar-right"></icon>
+      </navbar-item>
     </navbar>
     <Tool />
     <Wallet />
@@ -43,6 +46,12 @@ export default {
   },
 
   methods: {
+    WMClick() {
+      eeui.openPage({
+        url: 'wallet',
+        pageType: "app",
+      });
+    },
   }
 };
 </script>
@@ -66,5 +75,9 @@ export default {
   font-size: 32px;
   color: #ffffff;
 }
-
+.asset-navbar-right{
+  width: 100px;
+  height: 100px;
+  color: #ffffff;
+}
 </style>

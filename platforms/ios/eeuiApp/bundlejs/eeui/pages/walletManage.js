@@ -62,7 +62,7 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 52);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -211,91 +211,6 @@ exports.default = {
 
 /***/ }),
 
-/***/ 28:
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(29)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(30)
-
-/* template */
-var __vue_template__ = __webpack_require__(31)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/receipt.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-f53e6d38"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-module.exports.el = 'true'
-new Vue(module.exports)
-
-
-/***/ }),
-
-/***/ 29:
-/***/ (function(module, exports) {
-
-module.exports = {
-  "receipt": {
-    "width": "750",
-    "flex": 1
-  },
-  "receipt-navbar": {
-    "width": "750",
-    "height": "100"
-  },
-  "receipt-navbar-main": {
-    "flexDirection": "row",
-    "alignItems": "center"
-  },
-  "receipt-navbar-title": {
-    "fontSize": "32",
-    "color": "#ffffff"
-  },
-  "receipt-navbar-right": {
-    "width": "100",
-    "height": "100",
-    "color": "#ffffff"
-  },
-  "wallet-name": {
-    "backgroundColor": "#f7f8fa",
-    "color": "#333333",
-    "paddingTop": "16",
-    "paddingRight": "32",
-    "paddingBottom": "16",
-    "paddingLeft": "32",
-    "fontSize": "28"
-  }
-}
-
-/***/ }),
-
 /***/ 3:
 /***/ (function(module, exports) {
 
@@ -327,7 +242,92 @@ module.exports.render._withStripped = true
 
 /***/ }),
 
-/***/ 30:
+/***/ 52:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(53)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(54)
+
+/* template */
+var __vue_template__ = __webpack_require__(55)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/ch/BlockChain/HDWallet/src/pages/walletManage.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-256e1e42"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+module.exports.el = 'true'
+new Vue(module.exports)
+
+
+/***/ }),
+
+/***/ 53:
+/***/ (function(module, exports) {
+
+module.exports = {
+  "walletmanage": {
+    "width": "750",
+    "flex": 1
+  },
+  "walletmanage-navbar": {
+    "width": "750",
+    "height": "100"
+  },
+  "walletmanage-navbar-main": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "walletmanage-navbar-title": {
+    "fontSize": "32",
+    "color": "#ffffff"
+  },
+  "walletmanage-navbar-right": {
+    "width": "100",
+    "height": "100",
+    "color": "#ffffff"
+  },
+  "wallet-name": {
+    "backgroundColor": "#f7f8fa",
+    "color": "#333333",
+    "paddingTop": "16",
+    "paddingRight": "32",
+    "paddingBottom": "16",
+    "paddingLeft": "32",
+    "fontSize": "28"
+  }
+}
+
+/***/ }),
+
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -463,14 +463,14 @@ exports.default = {
 
 /***/ }),
 
-/***/ 31:
+/***/ 55:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["receipt"]
+    staticClass: ["walletmanage"]
   }, [_c('navbar', {
-    staticClass: ["receipt-navbar"]
+    staticClass: ["walletmanage-navbar"]
   }, [_c('navbar-item', {
     attrs: {
       "type": "back"
@@ -480,17 +480,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "title"
     }
   }, [_c('div', {
-    staticClass: ["receipt-navbar-main"]
+    staticClass: ["walletmanage-navbar-main"]
   }, [_c('text', {
-    staticClass: ["receipt-navbar-title"]
-  }, [_vm._v("收款币种选择")])])]), _c('navbar-item', {
+    staticClass: ["walletmanage-navbar-title"]
+  }, [_vm._v("钱包管理")])])]), _c('navbar-item', {
     attrs: {
       "type": "right"
     }
   }, [_c('icon', {
-    staticClass: ["receipt-navbar-right"],
+    staticClass: ["walletmanage-navbar-right"],
     attrs: {
-      "content": "tb-search"
+      "content": "tb-add"
     }
   })], 1)], 1), _c('scroll-view', {
     ref: "reflectName",

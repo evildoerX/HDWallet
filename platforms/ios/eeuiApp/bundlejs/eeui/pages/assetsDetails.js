@@ -74,14 +74,14 @@ var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(50)
+__vue_styles__.push(__webpack_require__(20)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(51)
+__vue_exports__ = __webpack_require__(21)
 
 /* template */
-var __vue_template__ = __webpack_require__(20)
+var __vue_template__ = __webpack_require__(22)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -115,80 +115,6 @@ new Vue(module.exports)
 /***/ }),
 
 /***/ 20:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["assetsdetails"]
-  }, [_c('navbar', {
-    staticClass: ["assetsdetails-navbar"]
-  }, [_c('navbar-item', {
-    attrs: {
-      "type": "back"
-    }
-  }), _c('navbar-item', {
-    attrs: {
-      "type": "title"
-    }
-  }, [_c('div', {
-    staticClass: ["assetsdetails-navbar-main"]
-  }, [_c('text', {
-    staticClass: ["assetsdetails-navbar-title"]
-  }, [_vm._v(_vm._s(_vm.asset.name))])])])], 1), _c('div', {
-    staticClass: ["assetsdetails-content"]
-  }, [_c('image', {
-    staticClass: ["assetsdetails-content-logo"],
-    attrs: {
-      "src": ("../assets/AssetLogo/" + (_vm.asset.name) + ".png")
-    }
-  }), _vm._m(0), _c('div', {
-    staticClass: ["assetsdetails-content_listitem"]
-  }, [_c('button', {
-    staticClass: ["assetsdetails-content_button"],
-    attrs: {
-      "eeui": {
-        text: '收款',
-        model: 'green'
-      }
-    },
-    on: {
-      "click": _vm.receiptClick
-    }
-  }), _c('button', {
-    staticClass: ["assetsdetails-content_button"],
-    attrs: {
-      "eeui": {
-        text: '转账',
-        model: 'blue'
-      }
-    },
-    on: {
-      "click": _vm.transferClick
-    }
-  })], 1), _c('div', {
-    staticClass: ["assetsdetails-content_line"]
-  }), _c('tabbar', {
-    ref: "reflectName",
-    staticClass: ["assetsdetails-content_tabs"],
-    attrs: {
-      "eeui": _vm.tabsEeui,
-      "tabPages": _vm.tabPages
-    }
-  })])], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["assetsdetails-content_asset"]
-  }, [_c('text', {
-    staticClass: ["assetsdetails-content_assetvalue"]
-  }, [_vm._v("0")]), _c('text', {
-    staticClass: ["assetsdetails-content_assetusd"]
-  }, [_vm._v("≈ 0.00 USD")])])
-}]}
-module.exports.render._withStripped = true
-
-/***/ }),
-
-/***/ 50:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -264,7 +190,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 51:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -369,6 +295,80 @@ exports.default = {
     }
   }
 };
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["assetsdetails"]
+  }, [_c('navbar', {
+    staticClass: ["assetsdetails-navbar"]
+  }, [_c('navbar-item', {
+    attrs: {
+      "type": "back"
+    }
+  }), _c('navbar-item', {
+    attrs: {
+      "type": "title"
+    }
+  }, [_c('div', {
+    staticClass: ["assetsdetails-navbar-main"]
+  }, [_c('text', {
+    staticClass: ["assetsdetails-navbar-title"]
+  }, [_vm._v(_vm._s(_vm.asset.name))])])])], 1), _c('div', {
+    staticClass: ["assetsdetails-content"]
+  }, [_c('image', {
+    staticClass: ["assetsdetails-content-logo"],
+    attrs: {
+      "src": ("../assets/AssetLogo/" + (_vm.asset.name) + ".png")
+    }
+  }), _vm._m(0), _c('div', {
+    staticClass: ["assetsdetails-content_listitem"]
+  }, [_c('button', {
+    staticClass: ["assetsdetails-content_button"],
+    attrs: {
+      "eeui": {
+        text: '收款',
+        model: 'green'
+      }
+    },
+    on: {
+      "click": _vm.receiptClick
+    }
+  }), _c('button', {
+    staticClass: ["assetsdetails-content_button"],
+    attrs: {
+      "eeui": {
+        text: '转账',
+        model: 'blue'
+      }
+    },
+    on: {
+      "click": _vm.transferClick
+    }
+  })], 1), _c('div', {
+    staticClass: ["assetsdetails-content_line"]
+  }), _c('tabbar', {
+    ref: "reflectName",
+    staticClass: ["assetsdetails-content_tabs"],
+    attrs: {
+      "eeui": _vm.tabsEeui,
+      "tabPages": _vm.tabPages
+    }
+  })])], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["assetsdetails-content_asset"]
+  }, [_c('text', {
+    staticClass: ["assetsdetails-content_assetvalue"]
+  }, [_vm._v("0")]), _c('text', {
+    staticClass: ["assetsdetails-content_assetusd"]
+  }, [_vm._v("≈ 0.00 USD")])])
+}]}
+module.exports.render._withStripped = true
 
 /***/ })
 

@@ -301,6 +301,11 @@ module.exports = {
   "asset-navbar-title": {
     "fontSize": "32",
     "color": "#ffffff"
+  },
+  "asset-navbar-right": {
+    "width": "100",
+    "height": "100",
+    "color": "#ffffff"
   }
 }
 
@@ -325,6 +330,9 @@ var _Wallet2 = _interopRequireDefault(_Wallet);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
 //
 //
 //
@@ -364,7 +372,14 @@ exports.default = {
   },
 
 
-  methods: {}
+  methods: {
+    WMClick: function WMClick() {
+      eeui.openPage({
+        url: 'wallet',
+        pageType: "app"
+      });
+    }
+  }
 };
 
 /***/ }),
@@ -1027,7 +1042,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["asset-navbar-main"]
   }, [_c('text', {
     staticClass: ["asset-navbar-title"]
-  }, [_vm._v("资产")])])])], 1), _c('Tool'), _c('Wallet')], 1)
+  }, [_vm._v("资产")])])]), _c('navbar-item', {
+    attrs: {
+      "type": "right"
+    },
+    on: {
+      "click": _vm.WMClick
+    }
+  }, [_c('icon', {
+    staticClass: ["asset-navbar-right"],
+    attrs: {
+      "content": "ios-wallet"
+    }
+  })], 1)], 1), _c('Tool'), _c('Wallet')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
