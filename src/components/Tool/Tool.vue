@@ -1,6 +1,6 @@
 <template>
   <div class="tool">
-    <div class="tool-item">
+    <div class="tool-item" @click="openScaner">
       <icon class="tool-item_icon" :eeui="{ content: 'tb-scan' }"></icon>
       <text class="tool-item_text">扫一扫</text>
     </div>
@@ -18,6 +18,27 @@
     </div>
   </div>
 </template>
+
+<script>
+const eeui = app.requireModule("eeui");
+export default {
+  methods: {
+    openScaner() {
+      eeui.openScaner(null, res => {
+        switch (res.status) {
+          case "success":
+            eeui.toast("识别成功：" + res.text);
+            break;
+
+          case "failed":
+            eeui.toast("识别失败");
+            break;
+        }
+      });
+    }
+  }
+};
+</script>
 
 <style scoped>
 .tool {

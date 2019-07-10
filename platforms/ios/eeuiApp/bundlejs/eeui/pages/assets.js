@@ -207,6 +207,9 @@ var __vue_styles__ = []
 __vue_styles__.push(__webpack_require__(4)
 )
 
+/* script */
+__vue_exports__ = __webpack_require__(28)
+
 /* template */
 var __vue_template__ = __webpack_require__(5)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
@@ -279,7 +282,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: ["tool"]
   }, [_c('div', {
-    staticClass: ["tool-item"]
+    staticClass: ["tool-item"],
+    on: {
+      "click": _vm.openScaner
+    }
   }, [_c('icon', {
     staticClass: ["tool-item_icon"],
     attrs: {
@@ -939,6 +945,67 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("资产")])])])], 1), _c('Tool'), _c('Wallet')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
+
+/***/ }),
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var eeui = app.requireModule("eeui");
+exports.default = {
+  methods: {
+    openScaner: function openScaner() {
+      eeui.openScaner(null, function (res) {
+        switch (res.status) {
+          case "success":
+            eeui.toast("识别成功：" + res.text);
+            break;
+
+          case "failed":
+            eeui.toast("识别失败");
+            break;
+        }
+      });
+    }
+  }
+};
 
 /***/ })
 /******/ ]);
