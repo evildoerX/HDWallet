@@ -379,17 +379,20 @@ module.exports = {
     "width": "750",
     "flex": 1
   },
-  "walletbg": {
+  "wallet-bg": {
     "width": "750",
-    "height": "130",
+    "height": "150",
     "backgroundColor": "#3eb4ff",
     "position": "absolute"
   },
-  "walletlist": {
+  "wallet-card": {
+    "marginTop": "16"
+  },
+  "wallet-list": {
     "width": "750",
     "flex": 1
   },
-  "walletlist-tips": {
+  "wallet-tips": {
     "textAlign": "center",
     "fontSize": "24",
     "paddingTop": "32",
@@ -397,14 +400,6 @@ module.exports = {
     "paddingBottom": "32",
     "paddingLeft": 0,
     "color": "#999999"
-  },
-  "tabbar": {
-    "width": "750",
-    "flex": 1
-  },
-  "page-content": {
-    "width": "750",
-    "flex": 1
   }
 }
 
@@ -453,11 +448,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
+
+var eeui = app.requireModule("eeui");
 
 exports.default = {
   components: {
@@ -519,6 +511,21 @@ exports.default = {
         value: "999999"
       }]
     };
+  },
+
+  methods: {
+    refreshListener: function refreshListener() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.$refs.reflectName.setHasMore(true);
+        _this.$refs.reflectName.refreshed();
+        eeui.toast({
+          message: "刷新成功",
+          gravity: "middle"
+        });
+      }, 1000);
+    }
   }
 };
 
@@ -881,32 +888,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: ["wallet"]
   }, [_c('div', {
-    staticClass: ["walletbg"]
-  }), _c('WalletCard'), _c('tabbar', {
+    staticClass: ["wallet-bg"]
+  }), _c('WalletCard', {
+    staticClass: ["wallet-card"]
+  }), _c('scroll-view', {
     ref: "reflectName",
-    staticClass: ["tabbar"],
+    staticClass: ["wallet-list"],
     attrs: {
       "eeui": {
-        tabType: 'top',
-        tabHeight: 0
+        pullTips: true,
       }
     },
     on: {
-      "pageSelected": _vm.pageSelected,
-      "tabReselect": _vm.tabReselect,
       "refreshListener": _vm.refreshListener
     }
-  }, [_c('tabbar-page', {
-    attrs: {
-      "eeui": {
-        tabName: 'name_1',
-        title: '首页',
-        selectedIcon: 'md-home'
-      }
-    }
-  }, [_c('div', {
-    staticClass: ["page-content"]
-  }, _vm._l((_vm.walletList), function(item, index) {
+  }, [_vm._l((_vm.walletList), function(item, index) {
     return _c('WalletItem', {
       key: index,
       attrs: {
@@ -917,7 +913,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "value": item.value
       }
     })
-  }))])], 1)], 1)
+  }), _c('text', {
+    staticClass: ["wallet-tips"]
+  }, [_vm._v("基于BIP44协议")])], 2)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
