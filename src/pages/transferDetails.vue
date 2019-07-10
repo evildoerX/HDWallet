@@ -7,7 +7,7 @@
           <text class="transferdetails-navbar-title">{{asset.name}}转账</text>
         </div>
       </navbar-item>
-      <navbar-item type="right">
+      <navbar-item type="right" @click="openScaner">
         <icon content="tb-scan" class="transferdetails-navbar-right"></icon>
       </navbar-item>
     </navbar>
@@ -15,7 +15,7 @@
       <div class="transferdetails-content_item">
         <div class="transferdetails-content_itemtitle">
           <text class="transferdetails-content_itemtitle_label">收款地址</text>
-          <icon content="tb-scan" class="transferdetails-content_itemtitle_right"></icon>
+          <icon content="tb-people-list" class="transferdetails-content_itemtitle_right"></icon>
         </div>
         <input class="transferdetails-content_iteminput" type="text" placeholder="请输入转账地址"/>
       </div>
@@ -89,6 +89,19 @@ export default {
     this.asset = app.config.params ? app.config.params : "error";
   },
   methods: {
+    openScaner() {
+      eeui.openScaner(null, res => {
+        switch (res.status) {
+          case "success":
+            eeui.toast("识别成功：" + res.text);
+            break;
+
+          case "failed":
+            eeui.toast("识别失败");
+            break;
+        }
+      });
+    },
     copyText() {
       eeui.copyText(this.assetAddress);
       eeui.toast({

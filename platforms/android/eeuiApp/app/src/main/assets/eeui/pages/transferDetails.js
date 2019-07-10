@@ -353,6 +353,19 @@ exports.default = {
   },
 
   methods: {
+    openScaner: function openScaner() {
+      eeui.openScaner(null, function (res) {
+        switch (res.status) {
+          case "success":
+            eeui.toast("识别成功：" + res.text);
+            break;
+
+          case "failed":
+            eeui.toast("识别失败");
+            break;
+        }
+      });
+    },
     copyText: function copyText() {
       eeui.copyText(this.assetAddress);
       eeui.toast({
@@ -393,6 +406,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.asset.name) + "转账")])])]), _c('navbar-item', {
     attrs: {
       "type": "right"
+    },
+    on: {
+      "click": _vm.openScaner
     }
   }, [_c('icon', {
     staticClass: ["transferdetails-navbar-right"],
@@ -410,7 +426,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("收款地址")]), _c('icon', {
     staticClass: ["transferdetails-content_itemtitle_right"],
     attrs: {
-      "content": "tb-scan"
+      "content": "tb-people-list"
     }
   })], 1), _c('input', {
     staticClass: ["transferdetails-content_iteminput"],
